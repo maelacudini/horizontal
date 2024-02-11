@@ -1,0 +1,31 @@
+.footer {
+  background-color: #141414;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+
+  .inner {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+
+    .contacts {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .title {
+        margin-bottom: 1rem;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+    }
+  }
+}

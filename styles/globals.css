@@ -1,0 +1,117 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+.h1 {
+  font-size: clamp(4.375rem, 2.0313rem + 7.5vw, 6.25rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h2,
+.h2 {
+  font-size: clamp(3.125rem, 1.5625rem + 5vw, 4.375rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h3,
+.h3 {
+  font-size: clamp(2.5rem, 1.7188rem + 2.5vw, 3.125rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h4,
+.h4 {
+  font-size: clamp(1.875rem, 1.0938rem + 2.5vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+p,
+a,
+button {
+  font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+  text-decoration: none;
+  color: black;
+  font-family: inherit;
+  transition: color 0.3s;
+}
+
+.btn-white {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  text-transform: uppercase;
+  background-color: white;
+  border: 2px solid white;
+  transition: all 0.3s;
+}
+
+.btn-white:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.btn-black {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  text-transform: uppercase;
+  background-color: #141414;
+  border: 2px solid #141414;
+  transition: all 0.3s;
+}
+
+.btn-black:hover {
+  background-color: transparent;
+  color: #141414;
+}
+
+.white {
+  color: white;
+}
+
+.gray,
+a:hover {
+  color: rgb(200, 200, 200);
+}
+
+.slidein {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #0a0a0a;
+  height: 100vh;
+  width: 100%;
+  transform-origin: bottom;
+  z-index: 99;
+}
+
+.slideout {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #0a0a0a;
+  height: 100vh;
+  width: 100%;
+  transform-origin: top;
+  z-index: 99;
+}

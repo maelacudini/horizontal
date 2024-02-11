@@ -1,0 +1,9 @@
+#home .swiper {
+  height: 100lvh;
+}
+
+#home .swiper-slide {
+  height: 100%;
+  width: fit-content;
+  min-width: 100vw;
+}

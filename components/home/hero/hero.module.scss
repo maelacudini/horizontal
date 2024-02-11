@@ -1,0 +1,19 @@
+.hero {
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  background-color: #141414;
+
+  .bottom {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+  }
+
+  img {
+    filter: brightness(0.5);
+    object-fit: cover;
+    object-position: center;
+  }
+}
