@@ -3,7 +3,6 @@
 }
 
 #home .swiper-slide {
-  height: 100%;
-  width: fit-content;
-  min-width: 100vw;
+  min-height: 100vh;
+  height: auto;
 }

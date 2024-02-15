@@ -1,27 +1,47 @@
 import Link from "next/link";
 import style from "./header.module.scss";
-import { useState } from "react";
-import Nav from "./nav/Nav";
+import { links } from "@/utils/data";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingUp = currentScrollY < prevScrollY;
+
+      setIsHeaderVisible(isScrollingUp || currentScrollY === 0);
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollY]);
 
   return (
-    <header className={style.header}>
-      <div
-        onClick={() => {
-          setOpen(!open);
-        }}
-        className={style.menuicon}
-        style={open ? { gap: "0rem" } : { gap: "0.5rem" }}
-      >
-        <span></span>
-        <span style={open ? { opacity: 0 } : { opacity: 1 }}></span>
-      </div>
-      <AnimatePresence mode="wait">
-        {open && <Nav open={open} setOpen={setOpen} key="nav" />}
-      </AnimatePresence>
-    </header>
+    <AnimatePresence>
+      {isHeaderVisible && (
+        <header className={style.header}>
+          <nav className={style.nav}>
+            {links.map((link, index) => (
+              <div key={index} className={style.link}>
+                <Link href={link.url}>
+                  {pathname === link.url ? <b>{link.name}</b> : link.name}
+                </Link>
+                <span className={style.emoji}>{link.emoji}</span>
+              </div>
+            ))}
+          </nav>
+        </header>
+      )}
+    </AnimatePresence>
   );
 }

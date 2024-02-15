@@ -1,26 +1,54 @@
 .header {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 98;
+  width: fit-content;
+  height: fit-content;
+  top: 0;
+  left: -7rem;
+  bottom: 0;
+  margin: auto 0;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  border-radius: 2.5rem;
+  padding: 1rem 2rem;
+  transform: rotate(-90deg);
 
-  .menuicon {
-    position: relative;
-    background-color: #141414;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 0.5rem;
+  .nav {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: gap 0.3s;
-    z-index: 99;
+    gap: 1rem;
 
-    span {
-      border-top: 2px solid white;
-      width: 50%;
-      transition: opacity 0.3s;
+    .link {
+      position: relative;
+
+      .emoji {
+        position: absolute;
+        top: -1.5rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        scale: 0;
+        transition: scale 0.3s;
+      }
+
+      &:hover {
+        .emoji {
+          scale: 1 !important;
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    right: 0;
+    bottom: unset;
+    left: 0;
+    top: 1rem;
+    margin: 0 auto;
+    transform: rotate(0);
   }
 }

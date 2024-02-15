@@ -1,16 +1,16 @@
 export const links = [
     { url: '/', name: 'Home', emoji: '🏡' },
-    { url: '/projects', name: 'Projects', emoji: '🔥' },
-    { url: '/about', name: 'About', emoji: '📘' },
+    { url: '/work', name: 'Work', emoji: '🔥' },
+    { url: '/about', name: 'About', emoji: '✌' },
     { url: 'mailto:', name: 'Contact', emoji: '✉️' },
 ];
 
 export const socials = [
-    { url: '/', name: 'Instagram' },
-    { url: '/projects', name: 'LinkedIn' },
-    { url: '/about', name: 'Patreon' },
     { url: 'mailto:', name: 'Twitter' },
+    { url: '/projects', name: 'LinkedIn' },
+    { url: '/', name: 'Send us a mail' },
 ]
+
 
 export const projects = [
     {

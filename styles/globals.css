@@ -11,33 +11,34 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: #f4f4f4;
 }
 
 h1,
 .h1 {
-  font-size: clamp(4.375rem, 2.0313rem + 7.5vw, 6.25rem);
+  font-size: clamp(3.125rem, -0.7813rem + 12.5vw, 6.25rem);
   font-weight: 400;
   line-height: 1.1;
 }
 
 h2,
 .h2 {
-  font-size: clamp(3.125rem, 1.5625rem + 5vw, 4.375rem);
-  font-weight: 400;
+  font-size: clamp(2.5rem, 1.7188rem + 2.5vw, 3.125rem);
+  font-weight: 300;
   line-height: 1.1;
 }
 
 h3,
 .h3 {
-  font-size: clamp(2.5rem, 1.7188rem + 2.5vw, 3.125rem);
-  font-weight: 400;
+  font-size: clamp(1.875rem, 1.0938rem + 2.5vw, 2.5rem);
+  font-weight: 300;
   line-height: 1.1;
 }
 
 h4,
 .h4 {
-  font-size: clamp(1.875rem, 1.0938rem + 2.5vw, 2.5rem);
-  font-weight: 400;
+  font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
+  font-weight: 300;
   line-height: 1.1;
 }
 
@@ -49,36 +50,38 @@ button {
   color: black;
   font-family: inherit;
   transition: color 0.3s;
+  font-weight: 300;
 }
 
 .btn-white {
-  border-radius: 1rem;
+  border-radius: 2.5rem;
   padding: 1rem 2rem;
-  border: none;
   text-transform: uppercase;
   background-color: white;
-  border: 2px solid white;
   transition: all 0.3s;
+  border: none;
+  width: fit-content;
+  min-width: 15rem;
 }
 
 .btn-white:hover {
-  background-color: transparent;
+  background-color: #0a0a0a;
   color: white;
 }
 
 .btn-black {
-  border-radius: 1rem;
+  border-radius: 2.5rem;
   padding: 1rem 2rem;
-  border: none;
   text-transform: uppercase;
-  background-color: #141414;
-  border: 2px solid #141414;
+  background-color: #0a0a0a;
+  border: none;
   transition: all 0.3s;
+  color: #fff;
 }
 
 .btn-black:hover {
-  background-color: transparent;
-  color: #141414;
+  background-color: #fff;
+  color: #0a0a0a;
 }
 
 .white {

@@ -69,12 +69,12 @@ export const line = {
 
 export const titleanim = {
     initial: {
-        x: '-110%'
+        y: '100%'
     },
-    animate: {
-        x: '0%',
+    animate: (i) => ({
+        y: '-2% ',
         transition: {
-            duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1]
+            duration: 1, delay: 0.1 * (i * 0.1), ease: [0.22, 1, 0.36, 1]
         }
-    },
+    }),
 }

@@ -1,44 +1,36 @@
-import Link from "next/link";
+import Title from "../title/Title";
 import style from "./footer.module.scss";
-import { links, socials } from "@/utils/data";
+import { socials } from "@/utils/data";
 
 export default function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.inner}>
-        <p className="h1 white">Let's work together</p>
-        <div className={style.contacts}>
-          <div>
-            <p className={`gray ${style.title}`}>PAGES</p>
-            {links.map((link, index) => (
-              <Link key={index} className="white" href={link.url}>
-                {link.name}
-              </Link>
-            ))}
-          </div>
-          <div>
-            <p className={`gray ${style.title}`}>PLACES</p>
-            <p className="white">Some street here</p>
-            <p className="white">21200</p>
-            <p className="white">United Kingdom</p>
-            <p className="white">Some place here</p>
-          </div>
-          <div>
-            <p className={`gray ${style.title}`}>SOCIAL</p>
-            <p className="white">Lorem ipsum dolor sit</p>
-            <p className="white">Lorem ipsum dolor sit</p>
-            <p className="white">Lorem ipsum dolor sit</p>
-            <p className="white">Lorem ipsum dolor sit</p>
-          </div>
-          <div>
-            <p className={`gray ${style.title}`}>SOCIAL</p>
+        <div className={style.intro}>
+          <Title
+            phrase={"Let's work together"}
+            className="white"
+            cl={"white h1"}
+          />
+          <p className="h4 gray">
+            We would love to hear what's your next big project, and you can find
+            us on the following platform.
+          </p>
+
+          <div className={style.socials}>
             {socials.map((social, index) => (
-              <Link key={index} className="white" href={social.url}>
+              <a key={index} className="white" href={social.url}>
                 {social.name}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
+      </div>
+
+      <div className={style.privacy}>
+        <small className="white">© Horizontal Architecture Studio</small>
+        <small className="white">2024 Privacy Policy</small>
+        <small className="white">Cookie Policy</small>
       </div>
     </footer>
   );
