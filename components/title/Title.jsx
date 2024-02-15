@@ -13,6 +13,7 @@ export default function Title({ phrase, cl }) {
             variants={titleanim}
             initial="initial"
             whileInView="animate"
+            viewport={{ once: true }}
             custom={index + 1}
             className={`${cl} ${style.word}`}
           >
