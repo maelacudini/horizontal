@@ -23,7 +23,7 @@ export default function Swpr() {
         slidesPerView={"auto"}
         freeMode={true}
         mousewheel={true}
-        draggable={true}
+        draggable={false}
         loop={true}
         modules={[FreeMode, Mousewheel]}
         className="swiper"
