@@ -1,24 +1,3 @@
-export const menu = {
-    initial: {
-        opacity: 0,
-        x: 20,
-    },
-    animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 0.5, ease: [.215, .61, .355, 1]
-        }
-    },
-    exit: {
-        opacity: 0,
-        x: 20,
-        transition: {
-            duration: 0.5, ease: [.215, .61, .355, 1]
-        }
-    }
-}
-
 export const slidein = {
     initial: {
         scaleY: 0
@@ -53,18 +32,6 @@ export const slideout = {
             duration: 1, ease: [0.22, 1, 0.36, 1]
         }
     }
-}
-
-export const line = {
-    initial: {
-        y: '100%'
-    },
-    animate: {
-        y: '0%',
-        transition: {
-            duration: 1, ease: [0.22, 1, 0.36, 1]
-        }
-    },
 }
 
 export const titleanim = {
