@@ -4,11 +4,11 @@
   position: relative;
   overflow: hidden;
 
-  // &:hover {
-  //   .bg {
-  //     scale: 1.25;
-  //   }
-  // }
+  &:hover {
+    .bg {
+      scale: 1.25;
+    }
+  }
 
   .bg {
     position: relative;
