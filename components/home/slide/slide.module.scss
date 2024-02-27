@@ -44,9 +44,11 @@
     z-index: 81;
 
     .intro {
+      position: relative;
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      z-index: 82;
     }
   }
 }

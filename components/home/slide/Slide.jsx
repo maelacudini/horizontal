@@ -31,8 +31,8 @@ export default function Slide({ project, index }) {
 
       <div className={style.main}>
         <div className={style.intro}>
-          <p className="white h2">titolo</p>
-          <p className="gray h4">sottotitolo</p>
+          <p className="white h2">{project.title}</p>
+          <p className="gray h4">{project.subtitle}</p>
         </div>
 
         <Link href={"/"} className="btn-white">
