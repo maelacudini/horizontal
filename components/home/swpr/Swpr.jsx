@@ -24,7 +24,7 @@ export default function Swpr() {
         spaceBetween={16}
         slidesPerView={"auto"}
         centeredSlides={true}
-        freeMode={true}
+        freeMode={option}
         mousewheel={option}
         draggable={true}
         loop={true}
@@ -33,12 +33,12 @@ export default function Swpr() {
       >
         {projectsVideo.map((project, index) => (
           <SwiperSlide key={index}>
-            <Slide index={index} project={project} />
+            <Slide index={index} project={project} option={option} />
           </SwiperSlide>
         ))}
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
-            <Slide index={index} project={project} />
+            <Slide index={index} project={project} option={option} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,11 +1,17 @@
 import Image from "next/image";
 import style from "./slide.module.scss";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-export default function Slide({ project, index }) {
+export default function Slide({ project, index, option }) {
   return (
     <article className={style.slide}>
-      <div className={style.main}>
+      <motion.div
+        initial={!option && { opacity: 0, marginTop: 20 }}
+        whileInView={!option && { opacity: 1, marginTop: 0 }}
+        viewport={{ once: false }}
+        className={style.main}
+      >
         <div className={style.intro}>
           <p className="white h2">{project.title}</p>
           <p className="gray h4">{project.subtitle}</p>
@@ -14,7 +20,7 @@ export default function Slide({ project, index }) {
         <Link href={"/"} className="btn-white">
           Check it out
         </Link>
-      </div>
+      </motion.div>
       {project.images ? (
         <Image
           alt="projectbg"
