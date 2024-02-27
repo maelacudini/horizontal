@@ -13,7 +13,7 @@ export default function Slide({ project, index }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
           className={style.bg}
           priority={index === 0 ? true : false}
-          loading={index === 0 ? "eager" : "lazy"}
+          loading="eager"
         />
       ) : (
         <video
