@@ -2,24 +2,22 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Mousewheel } from "swiper/modules";
-import { useEffect, useState } from "react";
-import style from "./swpr.module.scss";
-import Hero from "../hero/Hero";
-import Footer from "@/components/footer/Footer";
+import Slide from "../slide/Slide";
 
 export default function Swpr() {
-  const [direction, setDirection] = useState("vertical");
+  // const [direction, setDirection] = useState("vertical");
 
-  useEffect(() => {
-    const currentDirection =
-      window.innerWidth <= 800 ? "vertical" : "horizontal";
-    setDirection(currentDirection);
-  }, []);
+  // useEffect(() => {
+  //   const currentDirection =
+  //     window.innerWidth <= 800 ? "vertical" : "horizontal";
+  //   setDirection(currentDirection);
+  // }, []);
 
   return (
     <section id="home">
       <Swiper
-        direction={direction}
+        direction={"horizontal"}
+        spaceBetween={15}
         slidesPerView={"auto"}
         freeMode={true}
         mousewheel={true}
@@ -29,16 +27,22 @@ export default function Swpr() {
         className="swiper"
       >
         <SwiperSlide>
-          <Hero />
+          <Slide />
         </SwiperSlide>
         <SwiperSlide>
-          <div style={{ height: "100%", width: "100vw" }}>hello</div>
+          <Slide />
         </SwiperSlide>
         <SwiperSlide>
-          <div style={{ height: "100%", width: "100vw" }}>hello</div>
+          <Slide />
         </SwiperSlide>
         <SwiperSlide>
-          <Footer />
+          <Slide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide />
         </SwiperSlide>
       </Swiper>
     </section>

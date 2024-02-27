@@ -1,47 +1,56 @@
-import Link from "next/link";
 import style from "./header.module.scss";
-import { links } from "@/utils/data";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import horizontal from "../../public/horizontal.svg";
+import menu from "../../public/menu.svg";
+import close from "../../public/close.svg";
+import Nav from "./nav/Nav";
+import { toggleanim } from "@/utils/animations";
 
 export default function Header() {
-  const pathname = usePathname();
-  const [prevScrollY, setPrevScrollY] = useState(0);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const isScrollingUp = currentScrollY < prevScrollY;
-
-      setIsHeaderVisible(isScrollingUp || currentScrollY === 0);
-      setPrevScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollY]);
+  const [open, setOpen] = useState(false);
 
   return (
-    <AnimatePresence>
-      {isHeaderVisible && (
-        <header className={style.header}>
-          <nav className={style.nav}>
-            {links.map((link, index) => (
-              <div key={index} className={style.link}>
-                <Link href={link.url}>
-                  {pathname === link.url ? <b>{link.name}</b> : link.name}
-                </Link>
-                <span className={style.emoji}>{link.emoji}</span>
-              </div>
-            ))}
-          </nav>
-        </header>
-      )}
-    </AnimatePresence>
+    <header className={style.header}>
+      <div className={style.main}>
+        <Image
+          alt="horizontal"
+          src={horizontal}
+          height={25}
+          width={100}
+          loading="lazy"
+        />
+        <div className={style.toggle}>
+          <motion.div
+            variants={toggleanim}
+            initial="initial"
+            animate={open ? "animate" : "initial"}
+            className={style.slider}
+          >
+            <Image
+              onClick={() => setOpen(!open)}
+              alt="horizontal"
+              src={menu}
+              height={25}
+              width={25}
+              loading="lazy"
+            />
+            <Image
+              onClick={() => setOpen(!open)}
+              alt="horizontal"
+              src={close}
+              height={25}
+              width={25}
+              loading="lazy"
+            />
+          </motion.div>
+        </div>
+      </div>
+
+      <AnimatePresence mode="wait">
+        {open && <Nav open={open} setOpen={setOpen} key="nav" />}
+      </AnimatePresence>
+    </header>
   );
 }

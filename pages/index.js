@@ -23,7 +23,7 @@ export default function Home() {
         <meta name="publisher" content="Maela" />
         <meta name="format-detection" content="telephone=no, address=no, email=no" />
         <link rel="canonical" href="https://addwebsite.com" />
-        <link rel="alternate" hreflang="en-US" href="https://addwebsite.com/en-US" />
+        <link rel="alternate" hrefLang="en-US" href="https://addwebsite.com/en-US" />
 
         <meta property="og:title" content="Horizontal Architect Agency" />
         <meta property="og:description" content="The React Framework for the Web" />

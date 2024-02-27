@@ -1,8 +1,8 @@
 #home .swiper {
-  height: 100lvh;
+  height: calc(100lvh - 108px);
 }
 
 #home .swiper-slide {
-  min-height: 100vh;
-  height: auto;
+  height: 100%;
+  width: 25rem;
 }

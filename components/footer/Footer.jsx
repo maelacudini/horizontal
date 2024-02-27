@@ -5,7 +5,7 @@ import { socials } from "@/utils/data";
 export default function Footer() {
   return (
     <footer className={style.footer}>
-      <div className={style.inner}>
+      <div className={style.main}>
         <div className={style.intro}>
           <Title
             phrase={"Let's work together"}
@@ -25,12 +25,12 @@ export default function Footer() {
             ))}
           </div>
         </div>
-      </div>
 
-      <div className={style.privacy}>
-        <small className="white">© Horizontal Architecture Studio</small>
-        <small className="white">2024 Privacy Policy</small>
-        <small className="white">Cookie Policy</small>
+        <div className={style.privacy}>
+          <small className="white">© Horizontal Architecture Studio</small>
+          <small className="white">2024 Privacy Policy</small>
+          <small className="white">Cookie Policy</small>
+        </div>
       </div>
     </footer>
   );

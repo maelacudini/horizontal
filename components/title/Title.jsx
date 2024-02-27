@@ -15,7 +15,7 @@ export default function Title({ phrase, cl }) {
             whileInView="animate"
             viewport={{ once: true }}
             custom={index + 1}
-            className={`${cl} ${style.word}`}
+            className={`${cl} bold ${style.word}`}
           >
             {word}
           </motion.p>

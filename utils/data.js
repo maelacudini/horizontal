@@ -1,14 +1,16 @@
 export const links = [
-    { url: '/', name: 'Home', emoji: '🏡' },
+    // { url: '/', name: 'Home', emoji: '🏡' },
     { url: '/work', name: 'Work', emoji: '🔥' },
-    { url: '/about', name: 'About', emoji: '✌' },
-    { url: 'mailto:', name: 'Contact', emoji: '✉️' },
+    { url: '/about', name: 'About', emoji: '🕵	' },
+    { url: 'mailto:', name: 'Say Hi', emoji: '📩' },
+    { url: '/jobs', name: 'Jobs', emoji: '📰' },
 ];
 
 export const socials = [
-    { url: 'mailto:', name: 'Twitter' },
-    { url: '/projects', name: 'LinkedIn' },
-    { url: '/', name: 'Send us a mail' },
+    { url: '/', name: 'Twitter', img: '/socials/twitter.svg' },
+    { url: '/', name: 'Twitch', img: '/socials/twitch.svg' },
+    { url: '/', name: 'Facebook', img: '/socials/facebook.svg' },
+    { url: '/', name: 'Instagram', img: '/socials/instagram.svg' },
 ]
 
 export const projects = [
@@ -38,20 +40,32 @@ export const projects = [
 export const services = [
     {
         title: 'Architecture',
-        description: 'Our architecture service involves the design and construction of buildings and structures, blending artistry with functionality to create timeless spaces.'
-    },
-    {
-        title: 'Engineering',
-        description: 'Our engineering service applies scientific principles to innovate, design, and construct systems and structures, ensuring efficiency and sustainability.'
+        description: 'Our architecture service involves the design and construction of buildings and structures, blending artistry with functionality to create timeless spaces.',
+        bg: '#66676D',
+        color: '#fff',
+        name: 'John Smith',
     },
     {
         title: 'Interior Design',
-        description: 'Our interior design service focuses on creating inviting and personalized indoor spaces, harmonizing aesthetics with comfort and functionality.'
+        description: 'Our interior design service focuses on creating inviting and personalized indoor spaces, harmonizing aesthetics with comfort and functionality.',
+        bg: '#D8D3CD',
+        color: '#000',
+        name: 'Sophia Garcia',
     },
     {
         title: 'Exterior Design',
-        description: 'Our exterior design service specializes in enhancing outdoor spaces, integrating landscaping, lighting, and architectural elements to create captivating environments.'
-    }
+        description: 'Our exterior design service specializes in enhancing outdoor spaces, integrating landscaping, lighting, and architectural elements to create captivating environments.',
+        bg: '#BABEBF',
+        color: '#000',
+        name: 'Michael Brown',
+    },
+    {
+        title: 'Engineering',
+        description: 'Our engineering service applies scientific principles to innovate, design, and construct systems and structures, ensuring efficiency and sustainability.',
+        bg: '#626D6E',
+        color: '#fff',
+        name: 'Emily Johnson',
+    },
 ];
 
 
