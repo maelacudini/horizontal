@@ -22,17 +22,16 @@
     filter: brightness(70%);
     backdrop-filter: brightness(70%);
     transition: scale 0.5s;
+    z-index: 80;
   }
 
   .main {
-    position: absolute;
-    top: 2rem;
-    bottom: 2rem;
-    left: 2rem;
-    right: 2rem;
+    position: relative;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 81;
 
     .intro {
       display: flex;
