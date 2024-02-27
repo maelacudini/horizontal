@@ -1,8 +1,21 @@
 #home .swiper {
-  height: calc(100lvh - 108px);
+  height: calc(100vh - 109px);
 }
 
 #home .swiper-slide {
   height: 100%;
-  width: 25rem;
+  width: 30rem;
+  padding: 0rem 0.5rem;
+}
+
+#home .swiper-button-next::after,
+#home .swiper-button-prev::after {
+  font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+  color: #000;
+}
+
+@media (max-width: 800px) {
+  #home .swiper-slide {
+    width: 22rem;
+  }
 }

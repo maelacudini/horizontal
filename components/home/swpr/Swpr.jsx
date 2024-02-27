@@ -1,7 +1,8 @@
 import "swiper/css";
 import "swiper/css/free-mode";
+import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Mousewheel } from "swiper/modules";
+import { FreeMode, Mousewheel, Navigation } from "swiper/modules";
 import Slide from "../slide/Slide";
 
 export default function Swpr() {
@@ -17,8 +18,9 @@ export default function Swpr() {
     <section id="home">
       <Swiper
         direction={"horizontal"}
-        spaceBetween={15}
+        spaceBetween={0}
         slidesPerView={"auto"}
+        centeredSlides={true}
         freeMode={true}
         mousewheel={true}
         draggable={false}
@@ -26,6 +28,9 @@ export default function Swpr() {
         modules={[FreeMode, Mousewheel]}
         className="swiper"
       >
+        <SwiperSlide>
+          <Slide />
+        </SwiperSlide>
         <SwiperSlide>
           <Slide />
         </SwiperSlide>
