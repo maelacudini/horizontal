@@ -8,6 +8,10 @@
     .bg {
       scale: 1.25;
     }
+
+    .main {
+      opacity: 1;
+    }
   }
 
   .bg,
@@ -33,6 +37,8 @@
     flex-direction: column;
     justify-content: space-between;
     z-index: 81;
+    opacity: 0;
+    transition: opacity 0.5s;
 
     .intro {
       position: relative;
