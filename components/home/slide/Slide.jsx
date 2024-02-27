@@ -5,6 +5,16 @@ import Link from "next/link";
 export default function Slide({ project, index }) {
   return (
     <article className={style.slide}>
+      <div className={style.main}>
+        <div className={style.intro}>
+          <p className="white h2">{project.title}</p>
+          <p className="gray h4">{project.subtitle}</p>
+        </div>
+
+        <Link href={"/"} className="btn-white">
+          Check it out
+        </Link>
+      </div>
       {project.images ? (
         <Image
           alt="projectbg"
@@ -29,17 +39,6 @@ export default function Slide({ project, index }) {
           <source src={project.video[0]} type="video/mp4" />
         </video>
       )}
-
-      <div className={style.main}>
-        <div className={style.intro}>
-          <p className="white h2">{project.title}</p>
-          <p className="gray h4">{project.subtitle}</p>
-        </div>
-
-        <Link href={"/"} className="btn-white">
-          Check it out
-        </Link>
-      </div>
     </article>
   );
 }
