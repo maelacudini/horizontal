@@ -17,7 +17,7 @@ export default function Nav({ open, setOpen }) {
       <div className={style.links}>
         {links.map((link, index) => (
           <div className={style.link} key={index}>
-            <Link className="h3" href={link.url}>
+            <Link onClick={() => setOpen(!open)} className="h3" href={link.url}>
               {link.name}
             </Link>
             <span className={style.emoji}>{link.emoji}</span>

@@ -7,9 +7,11 @@ import menu from "../../public/menu.svg";
 import close from "../../public/close.svg";
 import Nav from "./nav/Nav";
 import { toggleanim } from "@/utils/animations";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const route = useRouter();
 
   return (
     <header className={style.header}>
@@ -20,6 +22,7 @@ export default function Header() {
           height={25}
           width={100}
           loading="lazy"
+          onClick={() => route.push("/")}
         />
         <div className={style.toggle}>
           <motion.div
@@ -28,7 +31,9 @@ export default function Header() {
             animate={open ? "animate" : "initial"}
             className={style.slider}
           >
-            <Image
+            <p onClick={() => setOpen(!open)}>Menu</p>
+            <p onClick={() => setOpen(!open)}>Close</p>
+            {/* <Image
               onClick={() => setOpen(!open)}
               alt="horizontal"
               src={menu}
@@ -43,7 +48,7 @@ export default function Header() {
               height={25}
               width={25}
               loading="lazy"
-            />
+            /> */}
           </motion.div>
         </div>
       </div>

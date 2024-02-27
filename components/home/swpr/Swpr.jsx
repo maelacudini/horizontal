@@ -1,19 +1,11 @@
 import "swiper/css";
 import "swiper/css/free-mode";
-import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Mousewheel, Navigation } from "swiper/modules";
+import { FreeMode, Mousewheel } from "swiper/modules";
 import Slide from "../slide/Slide";
+import { projects, projectsVideo } from "@/utils/data";
 
 export default function Swpr() {
-  // const [direction, setDirection] = useState("vertical");
-
-  // useEffect(() => {
-  //   const currentDirection =
-  //     window.innerWidth <= 800 ? "vertical" : "horizontal";
-  //   setDirection(currentDirection);
-  // }, []);
-
   return (
     <section id="home">
       <Swiper
@@ -28,27 +20,16 @@ export default function Swpr() {
         modules={[FreeMode, Mousewheel]}
         className="swiper"
       >
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
+        {projectsVideo.map((project, index) => (
+          <SwiperSlide key={index}>
+            <Slide index={index} project={project} />
+          </SwiperSlide>
+        ))}
+        {projects.map((project, index) => (
+          <SwiperSlide key={index}>
+            <Slide index={index} project={project} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );

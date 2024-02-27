@@ -13,7 +13,11 @@
       overflow-y: hidden;
 
       .slider {
-        img:nth-of-type(2) {
+        p {
+          cursor: pointer;
+        }
+
+        p:nth-of-type(2) {
           position: absolute;
           bottom: -100%;
           left: 0;

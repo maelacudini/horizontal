@@ -17,29 +17,29 @@ body {
 h1,
 .h1 {
   font-size: clamp(3.125rem, -0.7813rem + 12.5vw, 6.25rem);
-  font-weight: 300;
-  line-height: 1.1;
+  font-weight: 400;
+  line-height: 1;
 }
 
 h2,
 .h2 {
   font-size: clamp(2.5rem, 1.7188rem + 2.5vw, 3.125rem);
-  font-weight: 300;
-  line-height: 1.1;
+  font-weight: 400;
+  line-height: 1;
 }
 
 h3,
 .h3 {
   font-size: clamp(1.875rem, 1.0938rem + 2.5vw, 2.5rem);
-  font-weight: 300;
-  line-height: 1.1;
+  font-weight: 400;
+  line-height: 1;
 }
 
 h4,
 .h4 {
   font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
-  font-weight: 300;
-  line-height: 1.1;
+  font-weight: 400;
+  line-height: 1;
 }
 
 p,
@@ -55,6 +55,7 @@ button {
 
 a {
   transition: color 0.3s;
+  cursor: pointer;
 }
 
 a:hover {
@@ -69,14 +70,18 @@ small {
   border-radius: 2rem;
   padding: 1rem 2rem;
   text-transform: uppercase;
-  background-color: white;
-  transition: all 0.3s;
-  width: fit-content;
-  min-width: 15rem;
+  color: #fff;
   border: 1px solid #f4f4f4;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.25rem);
+  width: fit-content;
+  min-width: 12.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .btn-white:hover {
@@ -98,6 +103,7 @@ small {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .btn-black:hover {
