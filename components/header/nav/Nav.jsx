@@ -14,16 +14,22 @@ export default function Nav({ open, setOpen }) {
       exit="exit"
       className={style.nav}
     >
-      <div className={style.links}>
-        {links.map((link, index) => (
-          <div className={style.link} key={index}>
-            <Link onClick={() => setOpen(!open)} className="h3" href={link.url}>
-              {link.name}
-            </Link>
-            <span className={style.emoji}>{link.emoji}</span>
-          </div>
-        ))}
+      <div className={style.main}>
+        <div className={style.links}>
+          {links.map((link, index) => (
+            <div className={style.link} key={index}>
+              <Link
+                onClick={() => setOpen(!open)}
+                className="h3"
+                href={link.url}
+              >
+                {link.name}
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
+
       <div className={style.bottom}>
         <div>
           <p className="gray">Say hello</p>

@@ -33,22 +33,6 @@ export default function Header() {
           >
             <p onClick={() => setOpen(!open)}>Menu</p>
             <p onClick={() => setOpen(!open)}>Close</p>
-            {/* <Image
-              onClick={() => setOpen(!open)}
-              alt="horizontal"
-              src={menu}
-              height={25}
-              width={25}
-              loading="lazy"
-            />
-            <Image
-              onClick={() => setOpen(!open)}
-              alt="horizontal"
-              src={close}
-              height={25}
-              width={25}
-              loading="lazy"
-            /> */}
           </motion.div>
         </div>
       </div>

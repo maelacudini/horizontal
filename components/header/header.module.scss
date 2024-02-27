@@ -1,12 +1,16 @@
 .header {
+  display: flex;
+  justify-content: center;
+
   .main {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
     z-index: 100;
     position: relative;
+    width: 100%;
+    max-width: 90rem;
+    margin: 2rem;
 
     .toggle {
       position: relative;

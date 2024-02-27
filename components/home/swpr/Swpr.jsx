@@ -15,7 +15,7 @@ export default function Swpr() {
         centeredSlides={true}
         freeMode={true}
         mousewheel={true}
-        draggable={false}
+        draggable={true}
         loop={true}
         modules={[FreeMode, Mousewheel]}
         className="swiper"

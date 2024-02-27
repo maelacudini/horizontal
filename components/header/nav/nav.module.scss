@@ -8,38 +8,16 @@
   padding: 2rem;
   z-index: 99;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   .links {
-    display: grid;
-    gap: 10rem;
-    grid-template-columns: repeat(2, 1fr);
-
-    .link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-
-      .emoji {
-        position: absolute;
-        top: -2rem;
-        left: 0;
-        right: 0;
-        font-size: 1.5rem;
-        display: flex;
-        justify-content: center;
-        scale: 0;
-        transition: scale 0.3s;
-      }
-
-      &:hover {
-        .emoji {
-          scale: 1;
-        }
-      }
-    }
+    width: 100%;
+    max-width: 90rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .bottom {
@@ -50,6 +28,8 @@
     bottom: 2rem;
     left: 2rem;
     right: 2rem;
+    max-width: 90rem;
+    margin: 0 auto;
 
     div {
       display: flex;
@@ -62,11 +42,6 @@
 
 @media (max-width: 600px) {
   .nav {
-    .links {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 5rem;
-    }
-
     .bottom {
       flex-direction: column-reverse;
       gap: 1rem;
