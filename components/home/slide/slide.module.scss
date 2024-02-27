@@ -10,28 +10,19 @@
     }
   }
 
-  .bg {
-    position: relative;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(70%);
-    backdrop-filter: brightness(70%);
-    transition: scale 0.5s;
-    z-index: 80;
-  }
-
+  .bg,
   .video {
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
     top: 0;
-    z-index: 80;
+    left: 0;
+    right: 0;
     object-fit: cover;
     object-position: center;
     filter: brightness(70%);
     backdrop-filter: brightness(70%);
     transition: scale 0.5s;
+    z-index: 80;
   }
 
   .main {

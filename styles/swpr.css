@@ -5,7 +5,6 @@
 #home .swiper-slide {
   height: 100%;
   width: 30rem;
-  padding: 0rem 0.5rem;
 }
 
 #home .swiper-button-next::after,

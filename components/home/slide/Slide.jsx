@@ -20,6 +20,7 @@ export default function Slide({ project, index }) {
           className={style.video}
           width={"100%"}
           height={"100%"}
+          preload="none"
           autoPlay
           playsInline
           loop

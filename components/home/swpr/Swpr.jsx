@@ -21,7 +21,7 @@ export default function Swpr() {
     <section id="home">
       <Swiper
         direction={"horizontal"}
-        spaceBetween={0}
+        spaceBetween={16}
         slidesPerView={"auto"}
         centeredSlides={true}
         freeMode={option}
