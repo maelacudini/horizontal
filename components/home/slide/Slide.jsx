@@ -17,7 +17,7 @@ export default function Slide({ project, index }) {
         />
       ) : (
         <video
-          className={style.bg}
+          className={style.video}
           width={"100%"}
           height={"100%"}
           autoPlay

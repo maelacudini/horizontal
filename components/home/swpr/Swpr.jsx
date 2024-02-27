@@ -8,13 +8,14 @@ import { useEffect, useState } from "react";
 
 export default function Swpr() {
   const [option, setOpion] = useState(true);
-  useEffect(() => {
-    if (window.innerWidth < 600) {
-      setOpion(false);
-    } else {
-      setOpion(true);
-    }
-  }, []);
+
+  // useEffect(() => {
+  //   if (window.innerWidth < 600) {
+  //     setOpion(false);
+  //   } else {
+  //     setOpion(true);
+  //   }
+  // }, []);
 
   return (
     <section id="home">
