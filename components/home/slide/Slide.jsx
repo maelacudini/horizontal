@@ -16,8 +16,8 @@ export default function Slide({ project, index }) {
   return (
     <article className={style.slide}>
       <motion.div
-        whileInView={mobile && { marginTop: "0", opacity: 1 }}
-        initial={{ marginTop: "2rem", opacity: 0 }}
+        whileInView={mobile && { opacity: 1 }}
+        initial={!mobile ? { marginTop: "2rem", opacity: 0 } : { opacity: 0 }}
         whileHover={!mobile && { marginTop: "0", opacity: 1 }}
         viewport={{ once: true }}
         className={style.main}
