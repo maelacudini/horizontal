@@ -4,23 +4,15 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function Slide({ project, index }) {
-  const [mobile, setMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth < 600) {
-      setMobile(true);
-    }
-  }, []);
-
+export default function Slide({ project, index, mobile }) {
   return (
     <article className={style.slide}>
-      <div
-        // initial={{ top: "4rem", opacity: 0 }}
-        // whileHover={{ top: 0, opacity: 1 }}
-        // whileTap={{ top: 0, opacity: 1 }}
-        // whileInView={mobile && { top: 0, opacity: 1 }}
-        // viewport={{ once: true }}
+      <motion.div
+        initial={{ top: "4rem", opacity: 0 }}
+        whileHover={{ top: 0, opacity: 1 }}
+        whileTap={{ top: 0, opacity: 1 }}
+        whileInView={mobile && { top: 0, opacity: 1 }}
+        viewport={{ once: true }}
         className={style.main}
       >
         <div className={style.intro}>
@@ -31,7 +23,7 @@ export default function Slide({ project, index }) {
         <Link href={"/"} className="btn-white">
           Check it out
         </Link>
-      </div>
+      </motion.div>
       {project.images ? (
         <Image
           alt="projectbg"

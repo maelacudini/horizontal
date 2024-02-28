@@ -81,7 +81,7 @@ small {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-white:hover {
@@ -104,7 +104,7 @@ small {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-black:hover {

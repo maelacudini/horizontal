@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "@splidejs/splide/css/core";
 import Splide from "@splidejs/splide";
 import style from "./main.module.scss";
@@ -6,9 +6,19 @@ import { projects, projectsVideo } from "@/utils/data";
 import Slide from "../slide/Slide";
 
 export default function Main() {
+  const [mobile, setMobile] = useState(false);
+  const width = window.innerWidth;
+
   useEffect(() => {
+    if (width < 600) {
+      setMobile(true);
+      console.log(mobile);
+    }
+
+    console.log("splide");
+
     var splide = new Splide(".splide", {
-      direction: "rtl",
+      direction: mobile ? "ttb" : "rtl",
       height: "calc(100svh - 109px)",
       wheel: true,
       arrows: false,
@@ -22,7 +32,7 @@ export default function Main() {
     return () => {
       splide.destroy();
     };
-  }, []);
+  }, [width]);
 
   return (
     <section
@@ -37,7 +47,7 @@ export default function Main() {
               key={index + project}
               className={`splide__slide ${style.slide}`}
             >
-              <Slide index={index} project={project} />
+              <Slide mobile={mobile} index={index} project={project} />
             </div>
           ))}
           {projectsVideo.map((project, index) => (
@@ -45,7 +55,7 @@ export default function Main() {
               key={index + project}
               className={`splide__slide ${style.slide}`}
             >
-              <Slide index={index} project={project} />
+              <Slide mobile={mobile} index={index} project={project} />
             </div>
           ))}
         </div>
