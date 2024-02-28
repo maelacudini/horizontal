@@ -11,6 +11,12 @@
   align-items: center;
   justify-content: center;
 
+  small {
+    position: absolute;
+    top: 2.5rem;
+    transition: all 0.5s;
+  }
+
   .links {
     width: 100%;
     max-width: 90rem;

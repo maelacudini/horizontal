@@ -2,10 +2,13 @@ import { links, socials } from "@/utils/data";
 import style from "./nav.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { modalanim } from "@/utils/animations";
+import { modalanim, slideupgeneric } from "@/utils/animations";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Nav({ open, setOpen }) {
+  const [index, setIndex] = useState(undefined);
+
   return (
     <motion.nav
       variants={modalanim}
@@ -14,23 +17,44 @@ export default function Nav({ open, setOpen }) {
       exit="exit"
       className={style.nav}
     >
+      <small style={{ opacity: index !== undefined ? 1 : 0 }}>
+        {index !== undefined && links[index].phrase}
+      </small>
+
       <div className={style.main}>
         <div className={style.links}>
           {links.map((link, index) => (
-            <div className={style.link} key={index}>
+            <motion.div
+              variants={slideupgeneric}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              custom={index + 1}
+              className={style.link}
+              key={index}
+            >
               <Link
+                onMouseEnter={() => setIndex(index)}
+                onMouseLeave={() => setIndex(undefined)}
                 onClick={() => setOpen(!open)}
                 className="h3"
                 href={link.url}
               >
                 {link.name}
               </Link>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      <div className={style.bottom}>
+      <motion.div
+        variants={slideupgeneric}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        custom={5}
+        className={style.bottom}
+      >
         <div>
           <p className="gray">Say hello</p>
           <p className="gray">Some copyright statement</p>
@@ -47,7 +71,7 @@ export default function Nav({ open, setOpen }) {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </motion.nav>
   );
 }

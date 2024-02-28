@@ -16,13 +16,11 @@ export default function Main() {
       speed: 1000,
       gap: "1rem",
       focus: "center",
-      perPage: 6,
+      perPage: 4.25,
       breakpoints: {
         600: { perPage: 1 },
         800: { perPage: 2 },
-        1100: { perPage: 3 },
-        1440: { perPage: 4 },
-        2000: { perPage: 5 },
+        1200: { perPage: 3 },
       },
     });
 

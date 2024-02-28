@@ -1,9 +1,9 @@
 export const links = [
-    // { url: '/', name: 'Home', emoji: '🏡' },
-    { url: '/team', name: 'Team', emoji: '🔥' },
-    { url: '/about', name: 'About', emoji: '🕵	' },
-    { url: 'mailto:', name: 'Say Hi', emoji: '📩' },
-    { url: '/jobs', name: 'Jobs', emoji: '📰' },
+    { url: '/', name: 'Home', emoji: '🏡', phrase: 'Home sweet home...' },
+    { url: '/team', name: 'Team', emoji: '🔥', phrase: 'Meet the team!' },
+    { url: '/about', name: 'About', emoji: '🕵', phrase: 'Want to know more about us?' },
+    { url: '/jobs', name: 'Jobs', emoji: '📰', phrase: 'Interested in joining us?' },
+    { url: 'mailto:', name: 'Say Hello', emoji: '📩', phrase: 'Let\'s talk!' },
 ];
 
 export const socials = [
