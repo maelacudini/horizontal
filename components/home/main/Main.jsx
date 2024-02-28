@@ -16,10 +16,11 @@ export default function Main() {
     var splide = new Splide(".splide", {
       direction: "rtl",
       height: "calc(100svh - 109px)",
-      wheel: true,
+      wheel: !mobile && 1000,
       arrows: false,
       pagination: false,
-      speed: !mobile ? 1000 : 500,
+      speed: !mobile && 1000,
+      drag: mobile && true,
       gap: "1rem",
     });
 
