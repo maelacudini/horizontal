@@ -1,4 +1,3 @@
-import "@/styles/swpr.css";
 import "@/styles/globals.css";
 import { Figtree } from "next/font/google";
 import Header from "@/components/header/Header";

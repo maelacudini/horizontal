@@ -1,4 +1,4 @@
-import Swpr from "@/components/home/swpr/Swpr";
+import Main from "@/components/home/main/Main";
 import Head from "next/head";
 import { Fragment } from "react";
 
@@ -60,7 +60,7 @@ export default function Home() {
 
         <meta name="theme-color" content="white" />
       </Head>
-      <Swpr />
+      <Main />
     </Fragment>
   );
 }

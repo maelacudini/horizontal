@@ -85,31 +85,31 @@ small {
 }
 
 .btn-white:hover {
-  background-color: #0a0a0a;
-  color: white;
-  border: 1px solid #0a0a0a;
+  background-color: #fff;
+  color: #000;
 }
 
 .btn-black {
   border-radius: 2rem;
   padding: 1rem 2rem;
   text-transform: uppercase;
-  background-color: #0a0a0a;
-  transition: all 0.3s;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #000000;
+  border: 1px solid #000;
+  backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.25rem);
   width: fit-content;
-  min-width: 15rem;
-  border: 1px solid #0a0a0a;
+  min-width: 12.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .btn-black:hover {
-  background-color: #fff;
-  color: #0a0a0a;
-  border: 1px solid #f4f4f4;
+  background-color: #000000;
+  color: #fff;
 }
 
 .white {

@@ -2,19 +2,27 @@ import Image from "next/image";
 import style from "./slide.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-export default function Slide({ project, index, option }) {
+export default function Slide({ project, index }) {
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 600) {
+      setMobile(true);
+    }
+  }, []);
+
   return (
     <article className={style.slide}>
       <motion.div
-        initial={!option && { opacity: 0, marginTop: 20 }}
-        whileInView={!option && { opacity: 1, marginTop: 0 }}
+        whileInView={mobile && { marginTop: "0", opacity: 1 }}
         viewport={{ once: false }}
         className={style.main}
       >
         <div className={style.intro}>
-          <p className="white h2">{project.title}</p>
-          <p className="gray h4">{project.subtitle}</p>
+          <p className="white h3">{project.title}</p>
+          <p className="gray">{project.subtitle}</p>
         </div>
 
         <Link href={"/"} className="btn-white">
@@ -25,8 +33,8 @@ export default function Slide({ project, index, option }) {
         <Image
           alt="projectbg"
           src={project.images[0]}
-          fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+          fill
           className={style.bg}
           priority={index === 0 ? true : false}
           loading="eager"
