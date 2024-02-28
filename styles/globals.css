@@ -154,8 +154,3 @@ small {
   transform-origin: top;
   z-index: 99;
 }
-
-/*always hide splide pagination*/
-.splide__pagination {
-  visibility: hidden;
-}

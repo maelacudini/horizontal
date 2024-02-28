@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "@splidejs/splide/css";
+import "@splidejs/splide/css/core";
 import Splide from "@splidejs/splide";
 import style from "./main.module.scss";
 import { projects, projectsVideo } from "@/utils/data";
@@ -12,6 +12,7 @@ export default function Main() {
       height: "calc(100svh - 109px)",
       wheel: true,
       arrows: false,
+      pagination: false,
       speed: 1000,
       gap: "1rem",
       focus: "center",
@@ -37,24 +38,24 @@ export default function Main() {
       aria-label="Splide Homepage"
     >
       <div className={`splide__track`}>
-        <ul className={`splide__list`}>
+        <div className={`splide__list`}>
           {projects.map((project, index) => (
-            <li
+            <div
               key={index + project}
               className={`splide__slide ${style.slide}`}
             >
               <Slide index={index} project={project} />
-            </li>
+            </div>
           ))}
           {projectsVideo.map((project, index) => (
-            <li
+            <div
               key={index + project}
               className={`splide__slide ${style.slide}`}
             >
               <Slide index={index} project={project} />
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
