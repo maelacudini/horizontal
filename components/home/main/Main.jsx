@@ -7,15 +7,11 @@ import Slide from "../slide/Slide";
 
 export default function Main() {
   const [mobile, setMobile] = useState(false);
-  const width = window.innerWidth;
 
   useEffect(() => {
-    if (width < 600) {
+    if (window.innerWidth < 600) {
       setMobile(true);
-      console.log(mobile);
     }
-
-    console.log("splide");
 
     var splide = new Splide(".splide", {
       direction: mobile ? "ttb" : "rtl",
@@ -32,7 +28,7 @@ export default function Main() {
     return () => {
       splide.destroy();
     };
-  }, [width]);
+  }, []);
 
   return (
     <section

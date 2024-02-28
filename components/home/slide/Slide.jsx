@@ -16,11 +16,15 @@ export default function Slide({ project, index, mobile }) {
         className={style.main}
       >
         <div className={style.intro}>
-          <p className="white h3">{project.title}</p>
-          <p className="gray">{project.subtitle}</p>
+          <Link href="/" className="white h3">
+            {project.title}
+          </Link>
+          <Link href="/" className="gray">
+            {project.subtitle}
+          </Link>
         </div>
 
-        <Link href={"/"} className="btn-white">
+        <Link href="/" className="btn-white">
           Check it out
         </Link>
       </motion.div>
