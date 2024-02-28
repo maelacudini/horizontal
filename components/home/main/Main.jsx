@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 import Slide from "../slide/Slide";
 
 export default function Main() {
-  const [mobile, setMobile] = useState(false);
+  const [mobile, setMobile] = useState();
 
   useEffect(() => {
     if (window.innerWidth < 600) {
       setMobile(true);
+    } else {
+      setMobile(false);
     }
 
     var splide = new Splide(".splide", {
