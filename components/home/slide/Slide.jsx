@@ -16,7 +16,7 @@ export default function Slide({ project, index, mobile }) {
         className={style.main}
       >
         <div className={style.intro}>
-          <p className="white h3">{project.title}</p>
+          <p className="white h3 ">{project.title}</p>
           <p className="gray">{project.subtitle}</p>
         </div>
       </motion.div>
