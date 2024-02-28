@@ -154,3 +154,14 @@ small {
   transform-origin: top;
   z-index: 99;
 }
+
+/*swiper*/
+#home .swiper {
+  height: calc(100svh - 109px);
+  margin: 0rem 1rem;
+}
+
+#home .swiper-slide {
+  height: 100%;
+  width: 25rem;
+}

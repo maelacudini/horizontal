@@ -1,8 +1,6 @@
 import Image from "next/image";
 import style from "./slide.module.scss";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 export default function Slide({ project, index, mobile }) {
   return (
@@ -16,7 +14,7 @@ export default function Slide({ project, index, mobile }) {
         className={style.main}
       >
         <div className={style.intro}>
-          <p className="white h3 ">{project.title}</p>
+          <p className="white h3">{project.title}</p>
           <p className="gray">{project.subtitle}</p>
         </div>
       </motion.div>
