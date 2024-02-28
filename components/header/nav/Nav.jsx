@@ -4,10 +4,17 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { modalanim, slideupgeneric } from "@/utils/animations";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Nav({ open, setOpen }) {
   const [index, setIndex] = useState(undefined);
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 600) {
+      setMobile(true);
+    }
+  }, []);
 
   return (
     <motion.nav
@@ -17,9 +24,11 @@ export default function Nav({ open, setOpen }) {
       exit="exit"
       className={style.nav}
     >
-      <small style={{ opacity: index !== undefined ? 1 : 0 }}>
-        {index !== undefined && links[index].phrase}
-      </small>
+      {!mobile && (
+        <small style={{ opacity: index !== undefined ? 1 : 0 }}>
+          {index !== undefined && links[index].phrase}
+        </small>
+      )}
 
       <div className={style.main}>
         <div className={style.links}>

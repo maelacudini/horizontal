@@ -3,8 +3,6 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import horizontal from "../../public/horizontal.svg";
-import menu from "../../public/menu.svg";
-import close from "../../public/close.svg";
 import Nav from "./nav/Nav";
 import { toggleanim } from "@/utils/animations";
 import { useRouter } from "next/navigation";
