@@ -17,9 +17,9 @@ export default function Main() {
       direction: mobile ? "ttb" : "rtl",
       height: "calc(100svh - 109px)",
       wheel: true,
-      // arrows: false,
-      // pagination: false,
-      speed: 1000,
+      arrows: false,
+      pagination: false,
+      // speed: 1000,
       gap: "1rem",
     });
 
