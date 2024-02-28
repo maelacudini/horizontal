@@ -60,9 +60,7 @@ export default function Home() {
 
         <meta name="theme-color" content="white" />
       </Head>
-      <div id="home">
-        <Main />
-      </div>
+      <Main />
     </Fragment>
   );
 }
