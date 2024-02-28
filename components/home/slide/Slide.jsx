@@ -15,11 +15,12 @@ export default function Slide({ project, index }) {
 
   return (
     <article className={style.slide}>
-      <motion.div
-        whileInView={mobile && { top: 0, opacity: 1 }}
-        initial={{ top: "4rem", opacity: 0 }}
-        whileHover={!mobile && { top: 0, opacity: 1 }}
-        viewport={{ once: true }}
+      <div
+        // initial={{ top: "4rem", opacity: 0 }}
+        // whileHover={{ top: 0, opacity: 1 }}
+        // whileTap={{ top: 0, opacity: 1 }}
+        // whileInView={mobile && { top: 0, opacity: 1 }}
+        // viewport={{ once: true }}
         className={style.main}
       >
         <div className={style.intro}>
@@ -30,7 +31,7 @@ export default function Slide({ project, index }) {
         <Link href={"/"} className="btn-white">
           Check it out
         </Link>
-      </motion.div>
+      </div>
       {project.images ? (
         <Image
           alt="projectbg"

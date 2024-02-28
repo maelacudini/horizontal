@@ -15,13 +15,6 @@ export default function Main() {
       pagination: false,
       speed: 1000,
       gap: "1rem",
-      focus: "center",
-      perPage: 4.25,
-      breakpoints: {
-        600: { perPage: 1 },
-        800: { perPage: 2 },
-        1200: { perPage: 3 },
-      },
     });
 
     splide.mount();
