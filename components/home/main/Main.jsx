@@ -18,10 +18,10 @@ export default function Main() {
     var splide = new Splide(".splide", {
       direction: "rtl",
       height: "calc(100svh - 109px)",
-      wheel: !mobile && true,
+      wheel: true,
       arrows: false,
       pagination: false,
-      speed: !mobile && 1000,
+      // speed: !mobile && 1000,
       gap: "1rem",
     });
 
