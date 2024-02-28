@@ -18,7 +18,7 @@ export default function Main() {
     var splide = new Splide(".splide", {
       direction: "rtl",
       height: "calc(100svh - 109px)",
-      wheel: !mobile && 1000,
+      wheel: !mobile && true,
       arrows: false,
       pagination: false,
       speed: !mobile && 1000,
