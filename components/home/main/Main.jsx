@@ -12,7 +12,6 @@ export default function Main() {
       height: "calc(100svh - 109px)",
       wheel: true,
       arrows: false,
-      pagination: false,
       speed: 1000,
       gap: "1rem",
       focus: "center",
