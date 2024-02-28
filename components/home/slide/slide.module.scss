@@ -32,7 +32,6 @@
     z-index: 81;
     opacity: 0;
     margin-top: 2.5rem;
-    transition: opacity 0.5s, margin-top 0.5s;
 
     .intro {
       position: relative;
@@ -46,11 +45,6 @@
     .bg,
     .video {
       scale: 1.25;
-    }
-
-    .main {
-      margin-top: 0;
-      opacity: 1;
     }
   }
 }

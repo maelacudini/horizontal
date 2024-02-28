@@ -18,8 +18,10 @@ export default function Main() {
       focus: "center",
       perPage: 6,
       breakpoints: {
-        800: { perPage: 3 },
-        1200: { perPage: 4 },
+        600: { perPage: 1 },
+        800: { perPage: 2 },
+        1100: { perPage: 3 },
+        1440: { perPage: 4 },
         2000: { perPage: 5 },
       },
     });
