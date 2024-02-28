@@ -20,7 +20,6 @@ export default function Main() {
       arrows: false,
       pagination: false,
       speed: !mobile && 1000,
-      drag: mobile && true,
       gap: "1rem",
     });
 
