@@ -16,13 +16,9 @@ export default function Slide({ project, index, mobile }) {
         className={style.main}
       >
         <div className={style.intro}>
-          <p>{project.title}</p>
-          <p>{project.subtitle}</p>
+          <p className="white h3">{project.title}</p>
+          <p className="gray">{project.subtitle}</p>
         </div>
-
-        <Link href={"/"} className="btn-white">
-          Check it out
-        </Link>
       </motion.div>
       {project.images ? (
         <Image
