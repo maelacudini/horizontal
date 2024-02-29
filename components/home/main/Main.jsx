@@ -20,11 +20,11 @@ export default function Main() {
 
   return (
     <Swiper
-      direction={"horizontal"}
+      direction={mobile ? "vertical" : "horizontal"}
       slidesPerView={"auto"}
       spaceBetween={16}
-      mousewheel={!mobile && true}
-      freeMode={!mobile && true}
+      mousewheel={true}
+      freeMode={true}
       draggable={true}
       grabCursor={true}
       modules={[Mousewheel, FreeMode]}
