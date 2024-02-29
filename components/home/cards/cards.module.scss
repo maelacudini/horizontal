@@ -1,0 +1,15 @@
+.cards {
+  height: 100%;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 86;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    width: 18.5rem;
+  }
+}

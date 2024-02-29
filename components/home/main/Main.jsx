@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import SlidingText from "../slidingText/SlidingText";
 import Slide from "../slide/Slide";
+import Cards from "../cards/Cards";
 
 export default function Main() {
   const [mobile, setMobile] = useState(false);
@@ -21,7 +22,6 @@ export default function Main() {
 
   return (
     <section className={style.main}>
-      <SlidingText />
       <Swiper
         direction={"horizontal"}
         slidesPerView={"auto"}
@@ -33,27 +33,21 @@ export default function Main() {
         modules={[Mousewheel, FreeMode]}
         className="swiper"
       >
+        <SwiperSlide>
+          <Cards />
+        </SwiperSlide>
         {projects.map((project, index) => (
-          <div
-            key={index + project.title}
-            className={`splide__slide ${style.slide}`}
-          >
-            <SwiperSlide key={uuidv4()}>
-              <Slide mobile={mobile} index={index} project={project} />
-            </SwiperSlide>
-          </div>
+          <SwiperSlide key={uuidv4()}>
+            <Slide mobile={mobile} index={index} project={project} />
+          </SwiperSlide>
         ))}
         {projectsVideo.map((project, index) => (
-          <div
-            key={index + project.title}
-            className={`splide__slide ${style.slide}`}
-          >
-            <SwiperSlide key={uuidv4()}>
-              <Slide mobile={mobile} index={index} project={project} />
-            </SwiperSlide>
-          </div>
+          <SwiperSlide key={uuidv4()}>
+            <Slide mobile={mobile} index={index} project={project} />
+          </SwiperSlide>
         ))}
       </Swiper>
+      <SlidingText />
     </section>
   );
 }
