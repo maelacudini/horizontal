@@ -1,5 +1,6 @@
 .slide {
-  width: 100vw;
+  width: calc(100vw - 4rem);
+  max-width: 90rem;
   height: 100%;
   position: relative;
   overflow: hidden;
