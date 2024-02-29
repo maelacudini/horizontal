@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@/styles/swiper.css";
 import { Figtree } from "next/font/google";
 import Header from "@/components/header/Header";
 import { motion, AnimatePresence } from 'framer-motion'

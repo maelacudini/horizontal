@@ -1,5 +1,11 @@
-import "@splidejs/splide/css/core";
-import Splide from "@splidejs/splide";
+// import "@splidejs/splide/css/core";
+// import Splide from "@splidejs/splide";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import { Mousewheel, FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import style from "./main.module.scss";
 import { projects, projectsVideo } from "@/utils/data";
 import { useEffect, useState } from "react";
@@ -15,49 +21,75 @@ export default function Main() {
       setMobile(false);
     }
 
-    var splide = new Splide(".splide", {
-      direction: "rtl",
-      height: "calc(100svh - 109px)",
-      wheel: true,
-      arrows: false,
-      pagination: false,
-      // speed: !mobile && 1000,
-      gap: "1rem",
-    });
+    // var splide = new Splide(".splide", {
+    //   direction: "rtl",
+    //   height: "calc(100svh - 109px)",
+    //   wheel: true,
+    //   arrows: false,
+    //   pagination: false,
+    //   // speed: !mobile && 1000,
+    //   gap: "1rem",
+    // });
 
-    splide.mount();
+    // splide.mount();
 
-    return () => {
-      splide.destroy();
-    };
+    // return () => {
+    //   splide.destroy();
+    // };
   }, []);
 
   return (
-    <section
-      id="home"
-      className={`splide ${style.splide}`}
-      aria-label="Splide Homepage"
+    <Swiper
+      direction={"horizontal"}
+      slidesPerView={"auto"}
+      spaceBetween={16}
+      mousewheel={true}
+      freeMode={true}
+      draggable={true}
+      grabCursor={true}
+      modules={[Mousewheel, FreeMode]}
+      className="swiper"
     >
-      <div className={`splide__track`}>
-        <div className={`splide__list`}>
-          {projects.map((project, index) => (
-            <div
-              key={index + project}
-              className={`splide__slide ${style.slide}`}
-            >
-              <Slide mobile={mobile} index={index} project={project} />
-            </div>
-          ))}
-          {projectsVideo.map((project, index) => (
-            <div
-              key={index + project}
-              className={`splide__slide ${style.slide}`}
-            >
-              <Slide mobile={mobile} index={index} project={project} />
-            </div>
-          ))}
+      {projects.map((project, index) => (
+        <div key={index + project} className={`splide__slide ${style.slide}`}>
+          <SwiperSlide>
+            <Slide mobile={mobile} index={index} project={project} />
+          </SwiperSlide>
         </div>
-      </div>
-    </section>
+      ))}
+      {projectsVideo.map((project, index) => (
+        <div key={index + project} className={`splide__slide ${style.slide}`}>
+          <SwiperSlide>
+            <Slide mobile={mobile} index={index} project={project} />
+          </SwiperSlide>
+        </div>
+      ))}
+    </Swiper>
+    // <section
+    //   id="home"
+    //   className={`splide ${style.splide}`}
+    //   aria-label="Splide Homepage"
+    // >
+    //   <div className={`splide__track`}>
+    //     <div className={`splide__list`}>
+    // {projects.map((project, index) => (
+    //   <div
+    //     key={index + project}
+    //     className={`splide__slide ${style.slide}`}
+    //   >
+    //     <Slide mobile={mobile} index={index} project={project} />
+    //   </div>
+    // ))}
+    //       {projectsVideo.map((project, index) => (
+    //         <div
+    //           key={index + project}
+    //           className={`splide__slide ${style.slide}`}
+    //         >
+    //           <Slide mobile={mobile} index={index} project={project} />
+    //         </div>
+    //       ))}
+    //     </div>
+    //   </div>
+    // </section>
   );
 }

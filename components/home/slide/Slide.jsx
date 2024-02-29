@@ -1,23 +1,13 @@
 import Image from "next/image";
 import style from "./slide.module.scss";
-import { motion } from "framer-motion";
 
-export default function Slide({ project, index, mobile }) {
+export default function Slide({ project, index }) {
   return (
     <article className={style.slide}>
-      <motion.div
-        initial={{ top: "4rem", opacity: 0 }}
-        whileHover={{ top: 0, opacity: 1 }}
-        whileTap={{ top: 0, opacity: 1 }}
-        whileInView={mobile && { top: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        className={style.main}
-      >
-        <div className={style.intro}>
-          <p className="white h3">{project.title}</p>
-          <p className="gray">{project.subtitle}</p>
-        </div>
-      </motion.div>
+      <div className={style.intro}>
+        <p className="white h3">{project.title}</p>
+        <p className="gray">{project.subtitle}</p>
+      </div>
       {project.images ? (
         <Image
           alt="projectbg"

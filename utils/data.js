@@ -19,42 +19,48 @@ export const projects = [
         subtitle: 'A Coastal Sanctuary',
         description: 'Nestled along the sun-kissed shores, Sunset Haven epitomizes coastal luxury living. Our architectural marvels blend seamlessly with the natural landscape, offering residents breathtaking views of the ocean horizon. Immerse yourself in tranquility as gentle sea breezes caress your senses, while the meticulously crafted interiors provide a haven of comfort and elegance. Sunset Haven redefines coastal living, where every sunset becomes a cherished moment in time.',
         images: ['/homeslides/img1.jpg'],
-        date: '2022'
+        date: '2022',
+        bg: '#6B5B95'
     },
     {
         title: 'Urban Oasis Tower',
         subtitle: 'Elevated Urban Living',
         description: 'Urban Oasis Tower stands as a beacon of modernity amidst the bustling cityscape. Rising majestically, it offers a sanctuary above the urban chaos. Our visionary design seamlessly integrates lush green spaces within the concrete jungle, providing residents with a serene retreat high above the city streets. With panoramic views of the skyline, every moment at Urban Oasis Tower is a testament to urban luxury and tranquility, where the rhythm of the city fades into the background.',
         images: ['/homeslides/img2.jpg'],
-        date: '2022'
+        date: '2022',
+        bg: '#AC80A0'
     },
     {
         title: 'Mountain Vista Residence',
         subtitle: 'Serenity Amidst Peaks',
         description: 'Mountain Vista Residence is a testament to architectural harmony amidst nature’s grandeur. Nestled in the heart of the mountains, each residence offers unparalleled views of majestic peaks and verdant valleys. Designed to seamlessly blend with the surrounding landscape, our residences provide a serene retreat for those seeking refuge from the chaos of urban life. Experience the tranquility of mountain living at its finest, where every sunrise brings a sense of renewal and every sunset paints the sky in hues of serenity.',
         images: ['/homeslides/img3.jpg'],
-        date: '2023'
+        date: '2023',
+        bg: '#7FAB9B'
     },
     {
         title: 'Skyline Heights Apartments',
         subtitle: 'Elevated City Living',
         description: 'Skyline Heights Apartments redefine urban living with their soaring heights and unparalleled views. Perched atop the city skyline, each apartment offers a unique vantage point to admire the pulsating energy of the metropolis below. Our thoughtfully designed spaces seamlessly merge luxury and functionality, providing residents with an elevated living experience. From sunrise to sunset, immerse yourself in the vibrant rhythm of city life while enjoying the comfort and tranquility of Skyline Heights.',
         images: ['/homeslides/img4.jpg'],
-        date: '2023'
+        date: '2023',
+        bg: '#A8C4BE'
     },
     {
         title: 'Tranquil Forest Retreat',
         subtitle: 'Immersive Woodland Living',
         description: 'Tranquil Forest Retreat is a haven of peace and serenity nestled within the embrace of nature. Surrounded by lush greenery and towering trees, our architectural marvels blend seamlessly with the tranquil forest landscape. Escape the chaos of urban life and reconnect with nature as you explore winding trails, meandering streams, and hidden clearings. Every corner of Tranquil Forest Retreat is designed to evoke a sense of harmony and rejuvenation, offering residents a truly immersive woodland living experience.',
         images: ['/homeslides/img5.jpg'],
-        date: '2023'
+        date: '2023',
+        bg: '#C8C8A9'
     },
     {
         title: 'Metropolitan Mirage Towers',
         subtitle: 'Urban Elegance Redefined',
         description: 'Metropolitan Mirage Towers stand as a testament to urban elegance and sophistication. Rising gracefully amidst the city skyline, our towers offer a luxurious retreat from the hustle and bustle of urban life. With sleek contemporary designs and panoramic views of the cityscape, each residence is a sanctuary of style and comfort. Immerse yourself in the vibrant energy of the metropolis while enjoying the tranquility and exclusivity of Metropolitan Mirage Towers.',
         images: ['/homeslides/img6.jpg'],
-        date: '2023'
+        date: '2023',
+        bg: '#D8A48B'
     },
 ];
 
@@ -64,14 +70,16 @@ export const projectsVideo = [
         subtitle: 'Scenic Lakeside Living',
         description: 'Lakeview Haven offers a picturesque escape from the rigors of daily life, where the serene waterside setting soothes the soul. Nestled along the shores of a crystal-clear lake, our architectural wonders blend seamlessly with the natural beauty of the surroundings. From cozy lakeside cottages to luxurious waterfront villas, each residence offers panoramic views of the shimmering waters and verdant landscapes. Experience the epitome of lakeside living at Lakeview Haven, where every moment is infused with peace, tranquility, and natural beauty.',
         video: ['/video/video1.mp4'],
-        date: '2024'
+        date: '2024',
+        bg: '#8675A9'
     },
     {
         title: 'Eco-Skyline Tower',
         subtitle: 'Sustainable Urban Living',
         description: 'Eco-Skyline Tower is a groundbreaking symbol of sustainable urban living, where innovative design meets environmental consciousness. Our tower stands tall as a testament to eco-friendly architecture, harnessing renewable energy sources and implementing green technologies to minimize ecological footprint. Residents enjoy a harmonious blend of modern luxury and environmental responsibility, with lush green spaces, energy-efficient systems, and eco-conscious amenities. Experience urban living reimagined at Eco-Skyline Tower, where sustainability and sophistication converge.',
         video: ['/video/video2.mp4'],
-        date: '2024'
+        date: '2024',
+        bg: '#B287A3'
     },
 ]
 

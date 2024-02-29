@@ -1,0 +1,9 @@
+.swiper {
+  height: calc(100svh - 109px);
+  margin: 0rem 1rem !important;
+}
+
+.swiper-slide {
+  height: 100%;
+  width: 100%;
+}
