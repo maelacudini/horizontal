@@ -1,0 +1,40 @@
+.main {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 85;
+  overflow: hidden;
+  pointer-events: none;
+
+  .sliderContainer {
+    position: absolute;
+    bottom: 2rem;
+
+    .slider {
+      position: relative;
+      white-space: nowrap;
+
+      p {
+        padding-right: 2rem;
+      }
+
+      p:nth-of-type(2) {
+        position: absolute;
+        top: 0;
+        left: 100%;
+      }
+    }
+  }
+}
+
+// @media (max-width: 800px) {
+//   .slide {
+//     width: 200% !important;
+
+//     &:nth-of-type(2) {
+//       left: 200% !important;
+//     }
+//   }
+// }
