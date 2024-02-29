@@ -7,15 +7,14 @@ import style from "./main.module.scss";
 import { projects, projectsVideo } from "@/utils/data";
 import { useEffect, useState } from "react";
 import Slide from "../slide/Slide";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Main() {
-  const [mobile, setMobile] = useState();
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth < 600) {
       setMobile(true);
-    } else {
-      setMobile(false);
     }
   }, []);
 
@@ -24,53 +23,33 @@ export default function Main() {
       direction={"horizontal"}
       slidesPerView={"auto"}
       spaceBetween={16}
-      mousewheel={true}
-      freeMode={true}
+      mousewheel={!mobile && true}
+      freeMode={!mobile && true}
       draggable={true}
       grabCursor={true}
       modules={[Mousewheel, FreeMode]}
       className="swiper"
     >
       {projects.map((project, index) => (
-        <div key={index + project} className={`splide__slide ${style.slide}`}>
-          <SwiperSlide>
+        <div
+          key={index + project.title}
+          className={`splide__slide ${style.slide}`}
+        >
+          <SwiperSlide key={uuidv4()}>
             <Slide mobile={mobile} index={index} project={project} />
           </SwiperSlide>
         </div>
       ))}
       {projectsVideo.map((project, index) => (
-        <div key={index + project} className={`splide__slide ${style.slide}`}>
-          <SwiperSlide>
+        <div
+          key={index + project.title}
+          className={`splide__slide ${style.slide}`}
+        >
+          <SwiperSlide key={uuidv4()}>
             <Slide mobile={mobile} index={index} project={project} />
           </SwiperSlide>
         </div>
       ))}
     </Swiper>
-    // <section
-    //   id="home"
-    //   className={`splide ${style.splide}`}
-    //   aria-label="Splide Homepage"
-    // >
-    //   <div className={`splide__track`}>
-    //     <div className={`splide__list`}>
-    // {projects.map((project, index) => (
-    //   <div
-    //     key={index + project}
-    //     className={`splide__slide ${style.slide}`}
-    //   >
-    //     <Slide mobile={mobile} index={index} project={project} />
-    //   </div>
-    // ))}
-    //       {projectsVideo.map((project, index) => (
-    //         <div
-    //           key={index + project}
-    //           className={`splide__slide ${style.slide}`}
-    //         >
-    //           <Slide mobile={mobile} index={index} project={project} />
-    //         </div>
-    //       ))}
-    //     </div>
-    //   </div>
-    // </section>
   );
 }
