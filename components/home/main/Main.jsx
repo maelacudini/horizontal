@@ -1,6 +1,3 @@
-// import "@splidejs/splide/css/core";
-// import Splide from "@splidejs/splide";
-
 import "swiper/css";
 import "swiper/css/free-mode";
 import { Mousewheel, FreeMode } from "swiper/modules";
@@ -20,22 +17,6 @@ export default function Main() {
     } else {
       setMobile(false);
     }
-
-    // var splide = new Splide(".splide", {
-    //   direction: "rtl",
-    //   height: "calc(100svh - 109px)",
-    //   wheel: true,
-    //   arrows: false,
-    //   pagination: false,
-    //   // speed: !mobile && 1000,
-    //   gap: "1rem",
-    // });
-
-    // splide.mount();
-
-    // return () => {
-    //   splide.destroy();
-    // };
   }, []);
 
   return (
