@@ -1,3 +1,4 @@
+import Link from "next/link";
 import style from "./cards.module.scss";
 
 export default function Cards() {
@@ -7,10 +8,16 @@ export default function Cards() {
         Horizontal is an Architecture Agency founded in 2016 and based in Oslo,
         Norway.
       </p>
-      <p className="gray">
-        We are a team of four professionals, and we firmly believe in the
-        principle of minimalism and open-space. Let's talk about your projects!
-      </p>
+      <div className={style.bottom}>
+        <p className="gray">
+          We are a team of four professionals who firmly believe in the
+          principles of minimalism and open space. <br /> We can't wait to
+          discuss your projects.
+        </p>
+        <Link href="mailto:" className="btn-black">
+          Say Hello
+        </Link>
+      </div>
     </div>
   );
 }

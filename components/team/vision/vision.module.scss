@@ -1,0 +1,30 @@
+.vision {
+  background-color: rgb(250, 250, 250);
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  .main {
+    margin: 2rem;
+    width: 100%;
+    max-width: 90rem;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    gap: 1rem;
+
+    .awards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      img {
+        border-radius: 5rem;
+      }
+    }
+  }
+}

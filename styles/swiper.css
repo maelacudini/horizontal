@@ -1,8 +1,22 @@
-.swiper {
-  height: calc(100svh - 109px);
+#home .swiper {
+  height: calc(100svh - 198px);
 }
 
-.swiper-slide {
+#home .swiper-slide {
+  height: 100%;
+  width: fit-content !important;
+}
+
+#home .swiper-button-prev,
+#home .swiper-button-next {
+  visibility: hidden;
+}
+
+#team .swiper {
+  height: 100svh;
+}
+
+#team .swiper-slide {
   height: 100%;
   width: fit-content !important;
 }

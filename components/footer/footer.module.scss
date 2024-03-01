@@ -1,17 +1,20 @@
 .footer {
+  min-height: 100svh;
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 0.5rem;
+  background-color: #000000;
 
   .main {
-    background-color: #000;
     height: 100%;
     width: 100%;
+    max-width: 90rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 2rem;
     padding: 2rem;
 
     .intro {
@@ -24,7 +27,7 @@
 
       .socials {
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         margin: 0 auto;
       }
     }
@@ -36,7 +39,7 @@
       right: 2rem;
       display: flex;
       flex-direction: row;
-      gap: 2rem;
+      gap: 1rem;
     }
   }
 }
@@ -44,6 +47,5 @@
 @media (max-width: 800px) {
   .privacy {
     flex-direction: column !important;
-    gap: 0.5rem !important;
   }
 }

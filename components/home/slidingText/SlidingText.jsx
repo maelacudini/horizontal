@@ -33,19 +33,23 @@ export default function SlidingText() {
   }, [firstSlide, secondSlide]);
 
   return (
-    <main className={style.main}>
-      <div className={style.sliderContainer}>
-        <div className={style.slider}>
-          <p ref={firstSlide} className="h1 white">
-            Your new favourite Architecture Agency Your new favourite
-            Architecture Agency
-          </p>
-          <p ref={secondSlide} className="h1 white">
-            Your new favourite Architecture Agency Your new favourite
-            Architecture Agency
-          </p>
-        </div>
+    <section className={style.main}>
+      <div className={style.slider}>
+        <p ref={firstSlide} className=" gray">
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+        </p>
+        <p ref={secondSlide} className=" gray">
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+          Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
+        </p>
       </div>
-    </main>
+    </section>
   );
 }

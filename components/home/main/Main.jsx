@@ -1,6 +1,7 @@
 import "swiper/css";
 import "swiper/css/free-mode";
-import { Mousewheel, FreeMode } from "swiper/modules";
+import "swiper/css/navigation";
+import { Mousewheel, FreeMode, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import style from "./main.module.scss";
@@ -21,7 +22,7 @@ export default function Main() {
   }, []);
 
   return (
-    <section className={style.main}>
+    <section id="home" className={style.main}>
       <Swiper
         direction={"horizontal"}
         slidesPerView={"auto"}
@@ -30,7 +31,8 @@ export default function Main() {
         freeMode={true}
         draggable={true}
         grabCursor={true}
-        modules={[Mousewheel, FreeMode]}
+        navigation={true}
+        modules={[Mousewheel, FreeMode, Navigation]}
         className="swiper"
       >
         <SwiperSlide>
@@ -47,7 +49,6 @@ export default function Main() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <SlidingText />
     </section>
   );
 }

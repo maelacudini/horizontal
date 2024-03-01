@@ -1,30 +1,27 @@
 .main {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   overflow: hidden;
-  pointer-events: none;
+  padding: 2rem 0rem;
+  margin-top: 1rem;
+  background-color: black;
 
-  .sliderContainer {
-    position: absolute;
-    bottom: 2rem;
+  .slider {
+    position: relative;
+    z-index: 85;
+    white-space: nowrap;
 
-    .slider {
-      position: relative;
-      z-index: 85;
-      white-space: nowrap;
+    p {
+      padding-right: 0.5rem;
+      font-size: 1.5rem;
+    }
 
-      p {
-        padding-right: 2rem;
-      }
-
-      p:nth-of-type(2) {
-        position: absolute;
-        top: 0;
-        left: 100%;
-      }
+    p:nth-of-type(2) {
+      position: absolute;
+      top: 0;
+      left: 100%;
     }
   }
 }

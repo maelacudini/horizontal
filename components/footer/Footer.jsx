@@ -9,12 +9,12 @@ export default function Footer() {
         <div className={style.intro}>
           <Title
             phrase={"Let's work together"}
-            className="white"
-            cl={"white h1"}
+            justify={"center"}
+            col={"white"}
           />
           <p className="h4 gray">
-            We would love to hear what's your next big project, and you can find
-            us on the following platform.
+            We would love to hear what's your next big project, you can find us
+            on the following platform.
           </p>
 
           <div className={style.socials}>
