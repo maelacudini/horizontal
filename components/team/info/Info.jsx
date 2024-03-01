@@ -34,7 +34,7 @@ export default function Info() {
             key={`key-${team[persona].name}`}
             className={style.desc}
           >
-            <p className={`gray btn-white`}>{team[persona].role}</p>
+            <p className={`h4 gray`}>{team[persona].role}</p>
             <p className="h4 white">{team[persona].description}</p>
           </motion.div>
         </AnimatePresence>

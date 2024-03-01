@@ -1,4 +1,3 @@
-import Image from "next/image";
 import style from "./hero.module.scss";
 import Title from "@/components/title/Title";
 
@@ -15,13 +14,6 @@ export default function Hero() {
               "We are an Architecture Agency and partner for modern brands"
             }
           />
-          {/* <Image
-            className={style.img}
-            src="/icon.svg"
-            alt="icon"
-            height={50}
-            width={50}
-          /> */}
         </h1>
       </div>
     </section>
