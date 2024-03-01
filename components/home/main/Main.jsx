@@ -8,7 +8,6 @@ import style from "./main.module.scss";
 import { projects, projectsVideo } from "@/utils/data";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import SlidingText from "../slidingText/SlidingText";
 import Slide from "../slide/Slide";
 import Cards from "../cards/Cards";
 

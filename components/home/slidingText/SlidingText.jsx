@@ -35,14 +35,14 @@ export default function SlidingText() {
   return (
     <section className={style.main}>
       <div className={style.slider}>
-        <p ref={firstSlide} className=" gray">
+        <p ref={firstSlide} className="gray">
           Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
           Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
           Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
           Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
           Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
         </p>
-        <p ref={secondSlide} className=" gray">
+        <p ref={secondSlide} className="gray">
           Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
           Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
           Building Dreams, Shaping Futures: Architecting the World's Tomorrow.
