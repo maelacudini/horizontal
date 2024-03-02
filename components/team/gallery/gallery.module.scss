@@ -46,3 +46,13 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .image {
+    filter: brightness(0.5);
+  }
+
+  .over {
+    opacity: 1 !important;
+  }
+}

@@ -18,7 +18,7 @@ export default function Title({ phrase, justify, col }) {
             style={{ color: col ? col : "black" }}
             className={`${style.word}`}
           >
-            {word}&nbsp;
+            {word}
           </motion.h1>
         </span>
       ))}

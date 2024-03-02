@@ -2,6 +2,10 @@ import { projects } from "@/utils/data";
 import style from "./vision.module.scss";
 import Image from "next/image";
 import Title from "@/components/title/Title";
+import award from "../../../public/award/award.png";
+import award1 from "../../../public/award/award1.png";
+
+const awards = [award, award, award1, award1, award1];
 
 export default function Vision() {
   return (
@@ -17,24 +21,16 @@ export default function Vision() {
           }
         />
         <div className={style.awards}>
-          {projects.map((project, index) => (
+          {awards.map((award, index) => (
             <Image
               alt="award"
-              src={project.images[0]}
+              src={award}
               key={index}
-              width={75}
-              height={75}
+              width={100}
+              height={100}
               loading="lazy"
-            />
-          ))}
-          {projects.map((project, index) => (
-            <Image
-              alt="award"
-              src={project.images[0]}
-              key={index}
-              width={75}
-              height={75}
-              loading="lazy"
+              placeholder="blur"
+              blurDataURL="../../../public/award/award3.png"
             />
           ))}
         </div>

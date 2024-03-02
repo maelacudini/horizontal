@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100svh;
+  min-height: 100lvh;
 
   .main {
-    margin: 2rem;
+    margin: 5rem 2rem;
     width: 100%;
     max-width: 90rem;
     display: flex;
@@ -15,7 +15,7 @@
       flex-basis: 30%;
 
       h4 {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
       }
 
       .links {
@@ -26,6 +26,10 @@
         p {
           transition: all 0.3s;
           cursor: pointer;
+        }
+
+        .avatar {
+          object-fit: contain;
         }
       }
     }

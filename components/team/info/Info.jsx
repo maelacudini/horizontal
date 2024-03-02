@@ -3,6 +3,7 @@ import style from "./info.module.scss";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toggleDescTeam } from "@/utils/animations";
+import Image from "next/image";
 
 export default function Info() {
   const [persona, setPersona] = useState(0);
@@ -34,8 +35,14 @@ export default function Info() {
             key={`key-${team[persona].name}`}
             className={style.desc}
           >
-            <p className={`h4 gray`}>{team[persona].role}</p>
             <p className="h4 white">{team[persona].description}</p>
+            <Image
+              alt="sign"
+              src={team[persona].sign}
+              width={500}
+              height={100}
+              className={style.sign}
+            />
           </motion.div>
         </AnimatePresence>
       </div>
