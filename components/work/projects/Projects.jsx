@@ -10,7 +10,7 @@ export default function Projects() {
         <div className={style.container}>
           <AnimatePresence mode="wait">
             {projects.map((project, index) => (
-              <Project project={project} key={index} index={index + 1} />
+              <Project project={project} key={index + 1} index={index + 1} />
             ))}
           </AnimatePresence>
         </div>

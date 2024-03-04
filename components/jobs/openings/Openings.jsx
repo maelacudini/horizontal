@@ -10,7 +10,7 @@ export default function Openings() {
 
         <div className={style.list}>
           {jobs.map((job, index) => (
-            <div key={index} className={style.job}>
+            <div key={index + 1} className={style.job}>
               <p className="gray">{job.date}</p>
               <p className="h4">{job.role}</p>
               <p>{job.place}</p>

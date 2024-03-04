@@ -5,13 +5,13 @@ export const slidein = {
     animate: {
         scaleY: 0,
         transition: {
-            duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1]
+            duration: 1, ease: [0.22, 1, 0.36, 1]
         }
     },
     exit: {
         scaleY: 1,
         transition: {
-            duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1]
+            duration: 1, ease: [0.22, 1, 0.36, 1]
         }
     }
 }
@@ -23,13 +23,13 @@ export const slideout = {
     animate: {
         scaleY: 0,
         transition: {
-            duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1]
+            duration: 1, ease: [0.22, 1, 0.36, 1]
         }
     },
     exit: {
         scaleY: 0,
         transition: {
-            duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1]
+            duration: 1, ease: [0.22, 1, 0.36, 1]
         }
     }
 }
@@ -59,7 +59,7 @@ export const modalanim = {
     exit: {
         y: '-100%',
         transition: {
-            duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1]
+            duration: 1, ease: [0.22, 1, 0.36, 1]
         }
     }
 }

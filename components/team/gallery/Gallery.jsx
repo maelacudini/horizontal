@@ -39,6 +39,7 @@ export default function Gallery() {
                 src={person.image}
                 loading="eager"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
               />
               <motion.div
                 initial={{ opacity: 0 }}

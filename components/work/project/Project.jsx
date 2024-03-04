@@ -11,7 +11,7 @@ export default function Project({ project, index }) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      custom={index}
+      custom={index + 1}
       className={style.project}
     >
       <div className={style.overlay}>
@@ -19,28 +19,15 @@ export default function Project({ project, index }) {
           View full project
         </Link>
       </div>
-      {project.images ? (
-        <Image
-          alt="image"
-          src={project.images[0]}
-          height={500}
-          width={500}
-          loading="lazy"
-        />
-      ) : (
-        <video
-          className={style.video}
-          width={"100%"}
-          height={"500px"}
-          preload="none"
-          autoPlay
-          playsInline
-          loop
-          muted
-        >
-          <source src={project.video[0]} type="video/mp4" />
-        </video>
-      )}
+      <Image
+        alt="image"
+        src={project.images[0]}
+        height={500}
+        width={500}
+        loading="lazy"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+      />
+
       <p>{project.date}</p>
       <p className="h4">{project.title}</p>
     </motion.article>

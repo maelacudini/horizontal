@@ -175,8 +175,16 @@ export const benefits = [
         img: '/humaaans/human2.svg'
     },
     {
-        title: 'Employee Assistance Program (EAP)',
+        title: 'Employee Assistance Program',
         description: 'Confidential counseling and support services to help employees with personal or work-related issues.',
         img: '/humaaans/human3.svg'
     }
 ];
+
+export const awards = [
+    { img: '/award/award.png', title: 'Best House Ever, CA', year: 2022 },
+    { img: '/award/award.png', title: 'Best Apartment, RO', year: 2022 },
+    { img: '/award/award1.png', title: 'Best Design Of All Time, LA', year: 2023 },
+    { img: '/award/award1.png', title: 'Best Exterior Design, OS', year: 2023 },
+    { img: '/award/award1.png', title: 'Best Building in the City, VE', year: 2024 },
+]

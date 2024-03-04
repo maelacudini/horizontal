@@ -9,7 +9,7 @@ export default function Benefits() {
         <h2>What about the benefits we offer?</h2>
         <div className={style.container}>
           {benefits.map((benefit, index) => (
-            <div key={index} className={style.benefit}>
+            <div key={index + 1} className={style.benefit}>
               <div className={style.imgcont}>
                 <Image alt="image" src={benefit.img} height={250} width={250} />
               </div>
