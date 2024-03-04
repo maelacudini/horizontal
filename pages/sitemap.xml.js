@@ -3,6 +3,11 @@ import { projects, projectsVideo } from "@/utils/data";
 const BASE_URL = 'https://addwebsite/work';
 
 function generateSiteMap() {
+    if (!projects || !projectsVideo) {
+        console.error('No data available for sitemap generation');
+        return '';
+    }
+
     return (
         `<?xml version="1.0" encoding="UTF-8"?>
             <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -18,13 +23,13 @@ function generateSiteMap() {
                 <url>
                     <loc>https://addwebsite/jobs</loc>
                 </url>  
-                ${projects.map(({ project, _ }) => {
+                ${projects.map(({ project }) => {
             return `
                     <url>
                         <loc>${`${BASE_URL}/${project.title}`}</loc>
                     </url>`;
         }).join('')}
-                ${projectsVideo.map(({ project, _ }) => {
+                ${projectsVideo.map(({ project }) => {
             return `
                     <url>
                         <loc>${`${BASE_URL}/${project.title}`}</loc>
