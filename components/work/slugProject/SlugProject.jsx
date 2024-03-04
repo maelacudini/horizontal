@@ -2,10 +2,8 @@ import Image from "next/image";
 import style from "./slug.module.scss";
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/router";
 
 export default function SlugProject({ project, prevProject, nextProject }) {
-  const router = useRouter();
   const [copySuccess, setCopySuccess] = useState(false);
 
   function copyURL() {
@@ -25,14 +23,16 @@ export default function SlugProject({ project, prevProject, nextProject }) {
     <section className={style.main}>
       <article className={style.content}>
         <div>
-          <Image
-            alt="arrow"
-            src="/arrow.svg"
-            height={25}
-            width={25}
-            loading="lazy"
-            className={style.arrow}
-          />
+          <Link href="/work">
+            <Image
+              alt="arrow"
+              src="/arrow.svg"
+              height={25}
+              width={25}
+              loading="lazy"
+              className={style.arrow}
+            />
+          </Link>
           <p className="bold">Specifics</p>
           <p>{project.title}</p>
           <p>{project.subtitle}</p>
