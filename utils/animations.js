@@ -108,7 +108,7 @@ export const slideupProject = {
         opacity: 0,
         y: 50,
         transition: {
-            duration: 0.75, ease: [0.22, 1, 0.36, 1]
+            duration: 0.75, delay: 0.25, ease: [0.22, 1, 0.36, 1]
         }
     },
     animate: i => ({
