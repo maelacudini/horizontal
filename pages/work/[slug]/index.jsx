@@ -51,28 +51,28 @@ export default function Project() {
         />
         <link
           rel="canonical"
-          href={`https://addwebsite.com/work/${project.slug}`}
+          href={`https://https://horizontal-ten.vercel.app/work/${project.slug}`}
         />
         <link
           rel="alternate"
           hrefLang="en-US"
-          href="https://addwebsite.com/en-US"
+          href="https://https://horizontal-ten.vercel.app/en-US"
         />
 
         <meta property="og:title" content={`Horizontal | ${project.title}`} />
         <meta property="og:description" content={project.subtitle} />
         <meta
           property="og:url"
-          content={`https://addwebsite.com/work/${project.slug}`}
+          content={`https://https://horizontal-ten.vercel.app/work/${project.slug}`}
         />
         <meta
           property="og:site_name"
-          content={`https://addwebsite.com/work/${project.slug}`}
+          content={`https://https://horizontal-ten.vercel.app/work/${project.slug}`}
         />
         <meta property="og:locale" content="en_US" />
         <meta
           property="og:image:url"
-          content="https://addwebsite.org/card.png"
+          content="https://https://horizontal-ten.vercel.app/card.png"
         />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
@@ -99,7 +99,10 @@ export default function Project() {
         <meta name="twitter:creator:id" content="00000000000" />
         <meta name="twitter:title" content={`Horizontal | ${project.title}`} />
         <meta name="twitter:description" content={project.subtitle} />
-        <meta name="twitter:image" content="https://addwebsite.org/card.png" />
+        <meta
+          name="twitter:image"
+          content="https://https://horizontal-ten.vercel.app/card.png"
+        />
 
         <meta name="theme-color" content="white" />
 

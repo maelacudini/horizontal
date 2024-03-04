@@ -1,0 +1,13 @@
+.cursor {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  transform-origin: center;
+  mask-image: url("../../public/icon.svg");
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+}

@@ -1,3 +1,6 @@
 export default function Custom500() {
-    return <h1>500 - Server-side error occurred</h1>
+    return <section className='notfound'>
+        <h1>500 - Server Side Error</h1>
+        <Link href='/'>Go back to the Homepage</Link>
+    </section>
 }

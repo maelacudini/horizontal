@@ -1,6 +1,6 @@
 import { projects, projectsVideo } from "@/utils/data";
 
-const BASE_URL = 'https://addwebsite/work';
+const BASE_URL = 'https://https://horizontal-ten.vercel.app/work';
 
 function generateSiteMap() {
     if (!projects || !projectsVideo) {
@@ -12,16 +12,16 @@ function generateSiteMap() {
         `<?xml version="1.0" encoding="UTF-8"?>
             <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
                 <url>
-                    <loc>https://addwebsite</loc>
+                    <loc>https://https://horizontal-ten.vercel.app</loc>
                 </url>
                 <url>
-                    <loc>https://addwebsite/team</loc>
+                    <loc>https://https://horizontal-ten.vercel.app/team</loc>
                 </url>
                 <url>
-                    <loc>https://addwebsite/work</loc>
+                    <loc>https://https://horizontal-ten.vercel.app/work</loc>
                 </url>
                 <url>
-                    <loc>https://addwebsite/jobs</loc>
+                    <loc>https://https://horizontal-ten.vercel.app/jobs</loc>
                 </url>  
                 ${projects.map((project) => {
             return `
