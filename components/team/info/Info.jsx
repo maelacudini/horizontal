@@ -3,7 +3,6 @@ import style from "./info.module.scss";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toggleDescTeam } from "@/utils/animations";
-import Image from "next/image";
 
 export default function Info() {
   const [persona, setPersona] = useState(0);
@@ -12,12 +11,12 @@ export default function Info() {
     <section className={style.info}>
       <div className={style.main}>
         <div className={style.side}>
-          <h4 className="white">Index</h4>
+          <h4 className="">Index</h4>
           <div className={style.links}>
             {team.map((person, index) => (
               <p
                 key={index}
-                className={index === persona ? "white" : "gray"}
+                className={index === persona ? "gray" : ""}
                 onClick={() => setPersona(index)}
               >
                 00{index} / {person.name}
@@ -35,14 +34,17 @@ export default function Info() {
             key={`key-${team[persona].name}`}
             className={style.desc}
           >
-            <p className="h4 white">{team[persona].description}</p>
-            <Image
-              alt="sign"
-              src={team[persona].sign}
-              width={500}
-              height={100}
-              className={style.sign}
-            />
+            <p className="h4">{team[persona].description}</p>
+
+            <div className={style.details}>
+              <p>Name</p>
+              <p>{team[persona].name}</p>
+            </div>
+
+            <div className={style.details}>
+              <p>Role</p>
+              <p>{team[persona].role}</p>
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>

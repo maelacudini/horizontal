@@ -39,10 +39,16 @@ export default function Gallery() {
                 src={person.image}
                 fill
               />
-              <div viewport={{ once: false }} className={style.over}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={mobile ? { opacity: 1 } : {}}
+                whileHover={{ opacity: 1 }}
+                viewport={{ once: false }}
+                className={style.over}
+              >
                 <p className="h4 white">{person.name}</p>
                 <p className="gray">{person.role}</p>
-              </div>
+              </motion.div>
             </article>
           </SwiperSlide>
         ))}

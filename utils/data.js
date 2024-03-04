@@ -121,27 +121,23 @@ export const team = [
         role: 'Architect',
         description: 'With over 15 years of experience in the field of architecture, John Smith has become a renowned figure known for his visionary designs and meticulous attention to detail. His passion for architectural innovation is evident in every project he undertakes. John believes in creating spaces that not only meet the functional needs of the occupants but also evoke a sense of wonder and awe. His design philosophy revolves around blending modern aesthetics with sustainable practices, ensuring that his creations stand the test of time. John\'s collaborative approach and ability to translate clients’ visions into reality have earned him a reputation as a trusted partner in the architectural industry.Outside of work, John enjoys traveling to explore diverse architectural styles and drawing inspiration from different cultures.',
         image: '/team/john.jpg',
-        sign: '/signatures/john.svg'
     },
     {
         name: 'Emily Johnson',
         role: 'Engineer',
         description: 'Emily Johnson is an accomplished engineer with a diverse background in civil, structural, and environmental engineering. With a career spanning two decades, Emily has garnered extensive experience working on a wide range of projects, from large-scale infrastructure developments to innovative sustainable designs. Her expertise lies in problem-solving and applying cutting-edge technologies to optimize structural efficiency and functionality. Emily is committed to delivering engineering solutions that not only meet the technical requirements but also address the broader societal and environmental challenges. Her collaborative approach, coupled with a strong focus on continuous learning, enables her to stay at the forefront of engineering innovation. Outside of work, Emily enjoys mentoring young engineers and volunteering for community development projects.',
         image: '/team/emily.jpg',
-        sign: '/signatures/emily.svg'
     },
     {
         name: 'Sophia Garcia',
         role: 'Interior Designer',
         description: 'Sophia Garcia is a highly skilled interior designer known for her ability to transform spaces into havens of style, comfort, and functionality. With a keen eye for detail and a passion for creativity, Sophia approaches each project as a unique opportunity to bring her clients’ visions to life. Her design philosophy revolves around creating harmonious interiors that reflect the individuality and lifestyle of the occupants. Sophia believes that successful interior design goes beyond aesthetics; it should enhance the quality of life and foster a sense of well-being. Whether it\'s residential, commercial, or hospitality projects, Sophia\'s signature style combines timeless elegance with contemporary flair, resulting in spaces that are both inviting and inspiring. Outside of work, Sophia enjoys exploring art galleries, traveling to exotic destinations, and seeking inspiration from diverse cultures and design trends.',
         image: '/team/sophia.jpg',
-        sign: '/signatures/sophia.svg'
     },
     {
         name: 'Michael Brown',
         role: 'Exterior Designer',
         description: 'Michael Brown is a passionate exterior designer with a deep appreciation for the natural world and architectural form. With years of experience in landscape architecture and urban design, Michael brings a unique perspective to every project he undertakes. His approach to exterior design is rooted in the belief that outdoor spaces should seamlessly integrate with their surroundings while enhancing the built environment. Michael specializes in creating captivating landscapes that strike a balance between aesthetics, functionality, and ecological sustainability. Whether it\'s a residential garden, public park, or commercial development, Michael\'s designs celebrate the beauty of nature and elevate the outdoor experience for all who inhabit them. Outside of work, Michael enjoys hiking, gardening, and exploring new ways to connect people with the outdoors through his design work.',
         image: '/team/michael.jpg',
-        sign: '/signatures/michael.svg'
     }
 ];

@@ -24,11 +24,9 @@ export default function Nav({ open, setOpen }) {
       exit="exit"
       className={style.nav}
     >
-      {!mobile && (
-        <small style={{ opacity: index !== undefined ? 1 : 0 }}>
-          {index !== undefined && links[index].phrase}
-        </small>
-      )}
+      <small style={{ opacity: index !== undefined ? 1 : 0 }}>
+        {index !== undefined && links[index].phrase}
+      </small>
 
       <div className={style.main}>
         <div className={style.links}>

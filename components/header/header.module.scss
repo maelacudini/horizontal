@@ -17,11 +17,15 @@
       overflow-y: hidden;
 
       .slider {
-        p {
+        div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
           cursor: pointer;
         }
 
-        p:nth-of-type(2) {
+        div:nth-of-type(2) {
           position: absolute;
           bottom: -100%;
           left: 0;

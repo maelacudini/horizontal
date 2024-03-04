@@ -8,8 +8,12 @@ import style from "./main.module.scss";
 import { projects, projectsVideo } from "@/utils/data";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import Slide from "../slide/Slide";
 import Cards from "../cards/Cards";
+import dynamic from "next/dynamic";
+
+const DynamicSlide = dynamic(() => import("../slide/Slide"), {
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Main() {
   const [mobile, setMobile] = useState(false);
@@ -39,12 +43,12 @@ export default function Main() {
         </SwiperSlide>
         {projects.map((project, index) => (
           <SwiperSlide key={uuidv4()}>
-            <Slide mobile={mobile} index={index} project={project} />
+            <DynamicSlide mobile={mobile} index={index} project={project} />
           </SwiperSlide>
         ))}
         {projectsVideo.map((project, index) => (
           <SwiperSlide key={uuidv4()}>
-            <Slide mobile={mobile} index={index} project={project} />
+            <DynamicSlide mobile={mobile} index={index} project={project} />
           </SwiperSlide>
         ))}
       </Swiper>

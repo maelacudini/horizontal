@@ -16,7 +16,7 @@ body {
 
 h1,
 .h1 {
-  font-size: clamp(3.125rem, -0.7813rem + 12.5vw, 6.25rem);
+  font-size: clamp(3.125rem, 0.7813rem + 7.5vw, 5rem);
   font-weight: 400;
   line-height: 1.1;
 }
@@ -39,7 +39,6 @@ h4,
 .h4 {
   font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
   font-weight: 400;
-  line-height: 1.1;
 }
 
 p,
@@ -70,8 +69,8 @@ small {
   padding: 1rem 2rem;
   text-transform: uppercase;
   color: #fff;
-  border: 1px solid #f4f4f4;
-  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #fff;
+  background-color: #000;
   backdrop-filter: blur(0.15rem);
   -webkit-backdrop-filter: blur(0.15rem);
   width: fit-content;
@@ -80,19 +79,17 @@ small {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: filter 0.3s;
 }
 
 .btn-white:hover {
-  background-color: #fff;
-  color: #000;
+  filter: invert();
 }
 
 .btn-black {
   padding: 1rem 2rem;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.05);
-  color: #000000;
+  color: #000;
   border: 1px solid #000;
   backdrop-filter: blur(0.15rem);
   -webkit-backdrop-filter: blur(0.15rem);
@@ -102,12 +99,11 @@ small {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: filter 0.3s;
 }
 
 .btn-black:hover {
-  background-color: #000000;
-  color: #fff;
+  filter: invert();
 }
 
 .white {

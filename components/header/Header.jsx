@@ -29,8 +29,24 @@ export default function Header() {
             animate={open ? "animate" : "initial"}
             className={style.slider}
           >
-            <p onClick={() => setOpen(!open)}>Menu</p>
-            <p onClick={() => setOpen(!open)}>Close</p>
+            <div onClick={() => setOpen(!open)}>
+              <Image
+                alt="open"
+                src="/menu.svg"
+                height={20}
+                width={20}
+                loading="lazy"
+              />
+            </div>
+            <div onClick={() => setOpen(!open)}>
+              <Image
+                alt="close"
+                src="/close.svg"
+                height={20}
+                width={20}
+                loading="lazy"
+              />
+            </div>
           </motion.div>
         </div>
       </div>

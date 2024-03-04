@@ -1,5 +1,5 @@
 #home .swiper {
-  height: calc(100svh - 156px);
+  height: calc(100svh - 145px);
 }
 
 #home .swiper-slide {
@@ -13,7 +13,7 @@
 }
 
 #team .swiper {
-  height: 100lvh;
+  height: calc(100lvh - 160px);
 }
 
 #team .swiper-slide {
