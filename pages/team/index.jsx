@@ -1,10 +1,16 @@
 import { Fragment } from "react";
-import style from "./team.module.scss";
 import Hero from "@/components/team/hero/Hero";
 import Head from "next/head";
-import Gallery from "@/components/team/gallery/Gallery";
 import Info from "@/components/team/info/Info";
 import Vision from "@/components/team/vision/Vision";
+import dynamic from "next/dynamic";
+
+const DynamicGallery = dynamic(
+  () => import("@/components/team/gallery/Gallery"),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -18,7 +24,7 @@ export default function Team() {
   return (
     <Fragment>
       <Head>
-        <title>Horizontal Architect Agency | Team</title>
+        <title>Horizontal | Team</title>
 
         <link rel="icon" href="/icon.svg" />
 
@@ -97,7 +103,7 @@ export default function Team() {
         />
       </Head>
       <Hero />
-      <Gallery />
+      <DynamicGallery />
       <Vision />
       <Info />
     </Fragment>

@@ -10,7 +10,7 @@
     position: relative;
     width: 100%;
     max-width: 90rem;
-    margin: 2rem;
+    margin: 2rem 0rem;
 
     .toggle {
       position: relative;
@@ -32,5 +32,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1440px) {
+  .main {
+    margin: 2rem !important;
   }
 }

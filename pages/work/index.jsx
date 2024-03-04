@@ -1,6 +1,7 @@
 import { Fragment } from "react";
-import style from "./work.module.scss";
 import Head from "next/head";
+import Hero from "@/components/work/hero/Hero";
+import Projects from "@/components/work/projects/Projects";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -9,11 +10,12 @@ const jsonLd = {
   image: "image",
   description: "description",
 };
+
 export default function Work() {
   return (
     <Fragment>
       <Head>
-        <title>Horizontal Architect Agency | Work</title>
+        <title>Horizontal | Work</title>
 
         <link rel="icon" href="/icon.svg" />
 
@@ -91,6 +93,8 @@ export default function Work() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
+      <Hero />
+      <Projects />
     </Fragment>
   );
 }

@@ -103,6 +103,23 @@ export const slideupgeneric = {
     })
 }
 
+export const slideupProject = {
+    initial: {
+        opacity: 0,
+        y: 50,
+        transition: {
+            duration: 0.75, ease: [0.22, 1, 0.36, 1]
+        }
+    },
+    animate: i => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.75, delay: 0.25 * (0.25 * i), ease: [0.22, 1, 0.36, 1]
+        }
+    }),
+}
+
 export const toggleDescTeam = {
     initial: {
         opacity: 0,

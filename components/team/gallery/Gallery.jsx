@@ -37,6 +37,7 @@ export default function Gallery() {
                 className={style.image}
                 alt="image"
                 src={person.image}
+                loading="eager"
                 fill
               />
               <motion.div

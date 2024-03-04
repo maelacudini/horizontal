@@ -70,7 +70,7 @@ small {
   text-transform: uppercase;
   color: #fff;
   border: 1px solid #fff;
-  background-color: #000;
+  background-color: #ffffff25;
   backdrop-filter: blur(0.15rem);
   -webkit-backdrop-filter: blur(0.15rem);
   width: fit-content;
@@ -79,11 +79,11 @@ small {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: filter 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-white:hover {
-  filter: invert();
+  background-color: #00000025;
 }
 
 .btn-black {
@@ -91,6 +91,7 @@ small {
   text-transform: uppercase;
   color: #000;
   border: 1px solid #000;
+  background-color: #00000025;
   backdrop-filter: blur(0.15rem);
   -webkit-backdrop-filter: blur(0.15rem);
   width: fit-content;
@@ -99,11 +100,11 @@ small {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: filter 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-black:hover {
-  filter: invert();
+  background-color: #ffffff25;
 }
 
 .white {
@@ -151,4 +152,15 @@ small {
   width: 100%;
   transform-origin: top;
   z-index: 99;
+}
+
+/*not found, error,...*/
+.notfound {
+  height: calc(100lvh - 89px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
 }

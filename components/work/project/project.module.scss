@@ -1,0 +1,42 @@
+.project {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 81;
+  }
+
+  img,
+  .video {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    transition: filter 0.5s;
+    position: relative;
+    z-index: 80;
+  }
+
+  &:hover {
+    .overlay {
+      opacity: 1 !important;
+    }
+
+    img {
+      filter: brightness(50%);
+    }
+  }
+}

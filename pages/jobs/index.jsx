@@ -1,6 +1,9 @@
 import { Fragment } from "react";
-import style from "./jobs.module.scss";
 import Head from "next/head";
+import Hero from "@/components/jobs/hero/Hero";
+import Openings from "@/components/jobs/openings/Openings";
+import Benefits from "@/components/jobs/benefits/Benefits";
+import Img from "@/components/jobs/img/Img";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -14,7 +17,7 @@ export default function Jobs() {
   return (
     <Fragment>
       <Head>
-        <title>Horizontal Architect Agency | Team</title>
+        <title>Horizontal | Team</title>
 
         <link rel="icon" href="/icon.svg" />
 
@@ -92,6 +95,10 @@ export default function Jobs() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
+      <Hero />
+      <Img />
+      <Openings />
+      <Benefits />
     </Fragment>
   );
 }

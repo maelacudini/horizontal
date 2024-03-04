@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import style from "./contact.module.scss";
 import Head from "next/head";
 
 const jsonLd = {
@@ -14,7 +13,7 @@ export default function Contact() {
   return (
     <Fragment>
       <Head>
-        <title>Horizontal Architect Agency | Team</title>
+        <title>Horizontal | Team</title>
 
         <link rel="icon" href="/icon.svg" />
 

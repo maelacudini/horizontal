@@ -11,7 +11,7 @@ export default function Hero() {
           <Title
             justify={"flex-start"}
             phrase={
-              "We are an Architecture Agency and partner for modern brands"
+              "We are an Architecture Agency and partner for modern brands."
             }
           />
         </h1>

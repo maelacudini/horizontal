@@ -149,3 +149,34 @@ export const team = [
         image: '/team/michael.jpg',
     }
 ];
+
+export const jobs = [
+    { role: 'Senior Exterior Designer', place: 'Remote', date: '01/03/2024' },
+    { role: 'Junior Interior Designer', place: 'Remote', date: '15/02/2024' },
+    { role: 'Photographer', place: 'Hybrid', date: '17/01/2024' },
+    { role: 'Architect', place: 'Oslo', date: '11/12/2023' },
+    { role: 'Project Manager', place: 'Oslo', date: '23/11/2023' },
+]
+
+export const benefits = [
+    {
+        title: 'Flexible Work Hours',
+        description: 'Opportunity for employees to set their own work schedules, promoting work-life balance.',
+        img: '/humaaans/human.svg'
+    },
+    {
+        title: 'Professional Development',
+        description: 'Training programs and tuition reimbursement for employees to enhance their skills and knowledge.',
+        img: '/humaaans/human1.svg'
+    },
+    {
+        title: 'Remote Work Options',
+        description: 'Ability for employees to work remotely, providing flexibility and reducing commuting stress.',
+        img: '/humaaans/human2.svg'
+    },
+    {
+        title: 'Employee Assistance Program (EAP)',
+        description: 'Confidential counseling and support services to help employees with personal or work-related issues.',
+        img: '/humaaans/human3.svg'
+    }
+];

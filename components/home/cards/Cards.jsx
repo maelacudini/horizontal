@@ -14,9 +14,6 @@ export default function Cards() {
           principles of minimalism and open space. <br /> We can't wait to
           discuss your projects.
         </p>
-        <Link href="mailto:" className="btn-black">
-          Say Hello
-        </Link>
       </div>
     </div>
   );
