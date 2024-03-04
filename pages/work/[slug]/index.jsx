@@ -7,7 +7,7 @@ import SlugProject from "@/components/work/slugProject/SlugProject";
 
 export default function Project() {
   const router = useRouter();
-  const slug = router.query.slug[0];
+  const slug = router.query.slug;
 
   const project = projects.find((project) => project.slug === slug);
 

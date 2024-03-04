@@ -25,17 +25,16 @@ export default function SlugProject({ project, prevProject, nextProject }) {
     <section className={style.main}>
       <article className={style.content}>
         <div>
-          <Image
-            alt="arrow"
-            src="/arrow.svg"
-            height={25}
-            width={25}
-            loading="lazy"
-            className={style.arrow}
-            onClick={() => {
-              router.push("/work");
-            }}
-          />
+          <Link href="/work">
+            <Image
+              alt="arrow"
+              src="/arrow.svg"
+              height={25}
+              width={25}
+              loading="lazy"
+              className={style.arrow}
+            />
+          </Link>
           <p className="bold">Specifics</p>
           <p>{project.title}</p>
           <p>{project.subtitle}</p>
