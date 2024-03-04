@@ -1,5 +1,5 @@
 import Main from "@/components/home/main/Main";
-import SlidingText from "@/components/home/slidingText/SlidingText";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import { Fragment } from "react";
 
@@ -10,6 +10,13 @@ const jsonLd = {
   image: 'image',
   description: 'description',
 }
+
+const DynamicSlidingText = dynamic(
+  () => import("@/components/home/slidingText/SlidingText"),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
 
 export default function Home() {
   return (
@@ -75,7 +82,7 @@ export default function Home() {
         />
       </Head>
       <Main />
-      <SlidingText />
+      <DynamicSlidingText />
     </Fragment>
   );
 }

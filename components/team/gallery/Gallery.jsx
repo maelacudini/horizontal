@@ -42,7 +42,7 @@ export default function Gallery() {
               />
               <motion.div
                 initial={{ opacity: 0 }}
-                whileInView={mobile ? { opacity: 1 } : {}}
+                whileInView={mobile ? { opacity: 1 } : { opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 viewport={{ once: false }}
                 className={style.over}
