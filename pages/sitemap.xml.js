@@ -23,16 +23,16 @@ function generateSiteMap() {
                 <url>
                     <loc>https://addwebsite/jobs</loc>
                 </url>  
-                ${projects.map(({ project }) => {
+                ${projects.map(({ project, id }) => {
             return `
                     <url>
-                        <loc>${`${BASE_URL}/${project.title}`}</loc>
+                        <loc>${`${BASE_URL}/${project.slug}`}</loc>
                     </url>`;
         }).join('')}
-                ${projectsVideo.map(({ project }) => {
+                ${projectsVideo.map(({ project, id }) => {
             return `
                     <url>
-                        <loc>${`${BASE_URL}/${project.title}`}</loc>
+                        <loc>${`${BASE_URL}/${project.slug}`}</loc>
                     </url>`;
         }).join('')}
             </urlset>`
