@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://horizontal-ten.vercel.app/sitemap.xml

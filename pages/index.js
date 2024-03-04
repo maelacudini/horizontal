@@ -3,6 +3,14 @@ import SlidingText from "@/components/home/slidingText/SlidingText";
 import Head from "next/head";
 import { Fragment } from "react";
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'name',
+  image: 'image',
+  description: 'description',
+}
+
 export default function Home() {
   return (
     <Fragment>
@@ -60,6 +68,11 @@ export default function Home() {
         <meta name="twitter:image" content="https://addwebsite.org/card.png" />
 
         <meta name="theme-color" content="white" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </Head>
       <Main />
       <SlidingText />

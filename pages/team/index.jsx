@@ -4,8 +4,15 @@ import Hero from "@/components/team/hero/Hero";
 import Head from "next/head";
 import Gallery from "@/components/team/gallery/Gallery";
 import Info from "@/components/team/info/Info";
-import Footer from "@/components/footer/Footer";
 import Vision from "@/components/team/vision/Vision";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "team",
+  image: "image",
+  description: "description",
+};
 
 export default function Team() {
   return (
@@ -83,6 +90,11 @@ export default function Team() {
         <meta name="twitter:image" content="https://addwebsite.org/card.png" />
 
         <meta name="theme-color" content="white" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </Head>
       <Hero />
       <Gallery />
