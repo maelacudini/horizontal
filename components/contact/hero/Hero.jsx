@@ -11,7 +11,7 @@ export default function Hero() {
           <Title
             justify={"flex-start"}
             phrase={
-              "We're continuously scouting for new enthusiastic clients, let's talk about your new projects."
+              "We're continuously scouting for clients, let's talk about your new projects."
             }
           />
         </h1>
