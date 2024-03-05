@@ -10,14 +10,6 @@ import { usePathname, useRouter } from "next/navigation";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const route = useRouter();
-  const pathname = usePathname();
-
-  useEffect(() => {
-    if (pathname.includes("/work/")) {
-      const head = document.getElementById("header");
-      head.style.display = "none";
-    }
-  }, []);
 
   return (
     <header id="header" className={style.header}>
