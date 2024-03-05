@@ -21,22 +21,28 @@
   }
 
   .intro {
+    background-color: #00000050;
     height: 100%;
     width: 100%;
     padding: 2rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 1rem;
-    opacity: 1;
+    opacity: 0;
     transition: all 0.3s;
     z-index: 81;
   }
 }
 
 .slide:hover {
+  .intro {
+    opacity: 1;
+  }
+
   .bg,
   .video {
     scale: 1.15;

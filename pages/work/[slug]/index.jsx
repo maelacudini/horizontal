@@ -21,16 +21,21 @@ export default function Project() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "CreativeWork",
     name: project.title,
-    image: project.images[0],
     description: project.description,
+    url: `https://horizontal-ten.vercel.app/work/${project.slug}`,
+    image: project.images[0],
+    author: {
+      "@type": "Organization",
+      name: "Horizontal Architecture Agency",
+    },
   };
 
   return (
     <Fragment>
       <Head>
-        <title>Horizontal | {project.title}</title>
+        <title>{project.title}</title>
 
         <link rel="icon" href="/icon.svg" />
 
@@ -51,28 +56,28 @@ export default function Project() {
         />
         <link
           rel="canonical"
-          href={`https://https://horizontal-ten.vercel.app/work/${project.slug}`}
+          href={`https://horizontal-ten.vercel.app/work/${project.slug}`}
         />
         <link
           rel="alternate"
           hrefLang="en-US"
-          href="https://https://horizontal-ten.vercel.app/en-US"
+          href="https://horizontal-ten.vercel.app/en-US"
         />
 
-        <meta property="og:title" content={`Horizontal | ${project.title}`} />
+        <meta property="og:title" content={`${project.title}`} />
         <meta property="og:description" content={project.subtitle} />
         <meta
           property="og:url"
-          content={`https://https://horizontal-ten.vercel.app/work/${project.slug}`}
+          content={`https://horizontal-ten.vercel.app/work/${project.slug}`}
         />
         <meta
           property="og:site_name"
-          content={`https://https://horizontal-ten.vercel.app/work/${project.slug}`}
+          content={`https://horizontal-ten.vercel.app/work/${project.slug}`}
         />
         <meta property="og:locale" content="en_US" />
         <meta
           property="og:image:url"
-          content="https://https://horizontal-ten.vercel.app/card.png"
+          content="https://horizontal-ten.vercel.app/card.png"
         />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
@@ -97,11 +102,11 @@ export default function Project() {
         <meta name="twitter:site:id" content="00000000000" />
         <meta name="twitter:creator" content="@no-one" />
         <meta name="twitter:creator:id" content="00000000000" />
-        <meta name="twitter:title" content={`Horizontal | ${project.title}`} />
+        <meta name="twitter:title" content={`${project.title}`} />
         <meta name="twitter:description" content={project.subtitle} />
         <meta
           name="twitter:image"
-          content="https://https://horizontal-ten.vercel.app/card.png"
+          content="https://horizontal-ten.vercel.app/card.png"
         />
 
         <meta name="theme-color" content="white" />

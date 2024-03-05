@@ -1,22 +1,20 @@
 import Main from "@/components/home/main/Main";
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import { Fragment } from "react";
 
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'name',
-  image: 'image',
-  description: 'description',
-}
-
-const DynamicSlidingText = dynamic(
-  () => import("@/components/home/slidingText/SlidingText"),
-  {
-    loading: () => <p>Loading...</p>,
-  }
-);
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Horizontal Architecture Agency",
+  "description": "Crafting visionary designs in Oslo and beyond. Our architecture agency blends Scandinavian minimalism with innovative solutions. Discover our portfolio today.",
+  "url": "https://horizontal-ten.vercel.app/",
+  "logo": "https://horizontal-ten.vercel.app/logo.png",
+  "sameAs": [
+    "https://www.facebook.com",
+    "https://twitter.com",
+    "https://www.linkedin.com"
+  ]
+};
 
 export default function Home() {
   return (
@@ -44,7 +42,7 @@ export default function Home() {
         <meta property="og:title" content="Horizontal Architecture Agency" />
         <meta property="og:description" content="Crafting visionary designs in Oslo and beyond. Our architecture agency blends Scandinavian minimalism with innovative solutions. Discover our portfolio today." />
         <meta property="og:url" content="https://https://horizontal-ten.vercel.app/" />
-        <meta property="og:site_name" content="Next.js" />
+        <meta property="og:site_name" content="Horizontal" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:image:url" content="https://https://horizontal-ten.vercel.app/card.png" />
         <meta property="og:image:width" content="800" />
@@ -82,7 +80,6 @@ export default function Home() {
         />
       </Head>
       <Main />
-      <DynamicSlidingText />
     </Fragment>
   );
 }

@@ -1,0 +1,43 @@
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .main {
+    width: 100%;
+    max-width: 90rem;
+    margin: 5rem 2rem;
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .socials {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 5rem 0rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+  }
+}

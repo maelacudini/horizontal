@@ -1,8 +1,9 @@
 .cursor {
   width: 2rem;
   height: 2rem;
-  background-color: rgba(0, 0, 0);
-  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
   position: fixed;
   z-index: 100;
   pointer-events: none;

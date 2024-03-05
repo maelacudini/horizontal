@@ -1,0 +1,16 @@
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 2rem;
+  height: calc(100svh - 153px);
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    max-width: 90rem;
+  }
+}

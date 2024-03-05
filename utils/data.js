@@ -3,7 +3,7 @@ export const links = [
     { url: '/team', name: 'Team', emoji: '🔥', phrase: 'Meet the team!' },
     { url: '/work', name: 'Work', emoji: '🕵', phrase: 'What about work?' },
     { url: '/jobs', name: 'Jobs', emoji: '📰', phrase: 'Interested in joining us?' },
-    { url: 'mailto:', name: 'Say Hello', emoji: '📩', phrase: 'Let\'s talk!' },
+    { url: '/contact', name: 'Say Hello', emoji: '📩', phrase: 'Let\'s talk!' },
 ];
 
 export const socials = [

@@ -14,17 +14,19 @@ const DynamicGallery = dynamic(
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Product",
-  name: "team",
-  image: "image",
-  description: "description",
+  "@type": "Organization",
+  name: "Horizontal Architecture Agency",
+  description:
+    "Meet the talented team behind our visionary designs at Horizontal Architecture Agency.",
+  url: "https://horizontal-ten.vercel.app/team",
+  logo: "https://horizontal-ten.vercel.app/icon.svg",
 };
 
 export default function Team() {
   return (
     <Fragment>
       <Head>
-        <title>Horizontal | Team</title>
+        <title>Team</title>
 
         <link rel="icon" href="/icon.svg" />
 
@@ -46,30 +48,27 @@ export default function Team() {
           name="format-detection"
           content="telephone=no, address=no, email=no"
         />
-        <link
-          rel="canonical"
-          href="https://https://horizontal-ten.vercel.app"
-        />
+        <link rel="canonical" href="https://horizontal-ten.vercel.app/team" />
         <link
           rel="alternate"
           hrefLang="en-US"
-          href="https://https://horizontal-ten.vercel.app/en-US"
+          href="https://horizontal-ten.vercel.app/en-US"
         />
 
-        <meta property="og:title" content="Horizontal Architect Agency" />
+        <meta property="og:title" content="Team" />
         <meta
           property="og:description"
           content="Crafting visionary designs in Oslo and beyond. Our architecture agency blends Scandinavian minimalism with innovative solutions. Discover our portfolio today."
         />
         <meta
           property="og:url"
-          content="https://https://horizontal-ten.vercel.app/"
+          content="https://horizontal-ten.vercel.app/team"
         />
-        <meta property="og:site_name" content="Next.js" />
+        <meta property="og:site_name" content="Horizontal" />
         <meta property="og:locale" content="en_US" />
         <meta
           property="og:image:url"
-          content="https://https://horizontal-ten.vercel.app/card.png"
+          content="https://horizontal-ten.vercel.app/card.png"
         />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
@@ -94,14 +93,14 @@ export default function Team() {
         <meta name="twitter:site:id" content="00000000000" />
         <meta name="twitter:creator" content="@no-one" />
         <meta name="twitter:creator:id" content="00000000000" />
-        <meta name="twitter:title" content="Horizontal | Team" />
+        <meta name="twitter:title" content="Team" />
         <meta
           name="twitter:description"
           content="Crafting visionary designs in Oslo and beyond. Our architecture agency blends Scandinavian minimalism with innovative solutions. Discover our portfolio today."
         />
         <meta
           name="twitter:image"
-          content="https://https://horizontal-ten.vercel.app/card.png"
+          content="https://horizontal-ten.vercel.app/card.png"
         />
 
         <meta name="theme-color" content="white" />
