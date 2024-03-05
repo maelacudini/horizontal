@@ -1,0 +1,31 @@
+.hero {
+  position: sticky;
+  top: 0;
+  height: 100lvh;
+  width: 100%;
+
+  .links {
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 100;
+  }
+
+  .info {
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+  }
+}

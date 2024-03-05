@@ -8,7 +8,7 @@ export default function Projects() {
     <section className={style.projects}>
       <div className={style.main}>
         <div className={style.container}>
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {projects.map((project, index) => (
               <Project project={project} key={project.slug} index={index + 1} />
             ))}

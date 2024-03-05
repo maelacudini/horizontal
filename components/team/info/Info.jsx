@@ -3,6 +3,7 @@ import style from "./info.module.scss";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toggleDescTeam } from "@/utils/animations";
+import CursorContainer from "@/components/cursorContainer/CursorContainer";
 
 export default function Info() {
   const [persona, setPersona] = useState(0);
@@ -14,18 +15,19 @@ export default function Info() {
           <h4 className="">Index</h4>
           <div className={style.links}>
             {team.map((person, index) => (
-              <p
-                key={index}
-                className={index === persona ? "gray" : ""}
-                onClick={() => setPersona(index)}
-              >
-                00{index} / {person.name}
-              </p>
+              <CursorContainer key={index}>
+                <p
+                  className={index === persona ? "gray" : ""}
+                  onClick={() => setPersona(index)}
+                >
+                  00{index} / {person.name}
+                </p>
+              </CursorContainer>
             ))}
           </div>
         </div>
 
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           <motion.div
             variants={toggleDescTeam}
             initial="initial"

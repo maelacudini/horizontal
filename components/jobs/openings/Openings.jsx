@@ -1,6 +1,7 @@
 import { jobs } from "@/utils/data";
 import style from "./openings.module.scss";
 import Image from "next/image";
+import CursorContainer from "@/components/cursorContainer/CursorContainer";
 
 export default function Openings() {
   return (
@@ -10,18 +11,24 @@ export default function Openings() {
 
         <div className={style.list}>
           {jobs.map((job, index) => (
-            <div key={index + 1} className={style.job}>
-              <p className="gray">{job.date}</p>
-              <p className="h4">{job.role}</p>
-              <p>{job.place}</p>
-              <Image
-                alt="arrow"
-                src="/arrow.svg"
-                height={25}
-                width={25}
-                loading="lazy"
-              />
-            </div>
+            <CursorContainer key={index + 1}>
+              <div className={style.job}>
+                <div>
+                  <p className="gray">{job.date}</p>
+                  <p className="h4">{job.role}</p>
+                </div>
+                <div>
+                  <p>{job.place}</p>
+                  <Image
+                    alt="arrow"
+                    src="/arrow.svg"
+                    height={25}
+                    width={25}
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </CursorContainer>
           ))}
         </div>
       </div>

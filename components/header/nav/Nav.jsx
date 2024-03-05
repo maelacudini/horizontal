@@ -43,7 +43,7 @@ export default function Nav({ open, setOpen }) {
         initial="initial"
         animate="animate"
         exit="exit"
-        custom={5}
+        custom={6}
         className={style.bottom}
       >
         <div>

@@ -3,7 +3,8 @@ import { projects } from "@/utils/data";
 import Custom404 from "@/pages/404";
 import { Fragment } from "react";
 import Head from "next/head";
-import SlugProject from "@/components/work/slugProject/SlugProject";
+import Hero from "@/components/work/slugProject/hero/Hero";
+import Details from "@/components/work/slugProject/details/Details";
 
 export default function Project() {
   const router = useRouter();
@@ -116,7 +117,8 @@ export default function Project() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
-      <SlugProject
+      <Hero project={project} />
+      <Details
         project={project}
         prevProject={prevProject}
         nextProject={nextProject}

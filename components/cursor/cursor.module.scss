@@ -1,14 +1,15 @@
 .cursor {
-  width: 2rem;
-  height: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(0.5rem);
-  -webkit-backdrop-filter: blur(0.5rem);
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.25rem);
+  border-radius: 100%;
   position: fixed;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
-  transform-origin: center;
-  mask-image: url("../../public/icon.svg");
-  mask-repeat: no-repeat;
-  mask-size: 100%;
 }

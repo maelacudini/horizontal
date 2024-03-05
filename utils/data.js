@@ -151,8 +151,8 @@ export const team = [
 ];
 
 export const jobs = [
-    { role: 'Senior Exterior Designer', place: 'Remote', date: '01/03/2024' },
-    { role: 'Junior Interior Designer', place: 'Remote', date: '15/02/2024' },
+    { role: 'Exterior Designer', place: 'Remote', date: '01/03/2024' },
+    { role: 'Interior Designer', place: 'Remote', date: '15/02/2024' },
     { role: 'Photographer', place: 'Hybrid', date: '17/01/2024' },
     { role: 'Architect', place: 'Oslo', date: '11/12/2023' },
     { role: 'Project Manager', place: 'Oslo', date: '23/11/2023' },

@@ -12,6 +12,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #fff;
+  cursor: url("/cursor.svg"), auto;
 }
 
 h1,
@@ -54,7 +55,6 @@ button {
 
 a {
   transition: color 0.3s;
-  cursor: pointer;
 }
 
 a:hover {
@@ -129,26 +129,26 @@ small {
 
 /*motion page transition*/
 .slidein {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   background-color: #000;
-  height: 100vh;
+  height: 100lvh;
   width: 100%;
   transform-origin: bottom;
   z-index: 99;
 }
 
 .slideout {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   background-color: #000;
-  height: 100vh;
+  height: 100lvh;
   width: 100%;
   transform-origin: top;
   z-index: 99;

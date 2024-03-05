@@ -1,11 +1,10 @@
 import Image from "next/image";
-import style from "./slug.module.scss";
+import style from "./details.module.scss";
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import CursorContainer from "@/components/cursorContainer/CursorContainer";
 
-export default function SlugProject({ project, prevProject, nextProject }) {
-  const router = useRouter();
+export default function Details({ project, prevProject, nextProject }) {
   const [copySuccess, setCopySuccess] = useState(false);
 
   function copyURL() {
@@ -25,16 +24,6 @@ export default function SlugProject({ project, prevProject, nextProject }) {
     <section className={style.main}>
       <article className={style.content}>
         <div>
-          <Link href="/work/">
-            <Image
-              alt="arrow"
-              src="/arrow.svg"
-              height={25}
-              width={25}
-              loading="lazy"
-              className={style.arrow}
-            />
-          </Link>
           <p className="bold">Specifics</p>
           <p>{project.title}</p>
           <p>{project.subtitle}</p>
@@ -50,21 +39,15 @@ export default function SlugProject({ project, prevProject, nextProject }) {
 
       <div className={style.navigation}>
         {prevProject && (
-          <Link href={`/work/${prevProject.slug}`}>Previous project</Link>
+          <CursorContainer>
+            <Link href={`/work/${prevProject.slug}`}>Previous project</Link>
+          </CursorContainer>
         )}
         {nextProject && (
-          <Link href={`/work/${nextProject.slug}`}>Next project</Link>
+          <CursorContainer>
+            <Link href={`/work/${nextProject.slug}`}>Next project</Link>
+          </CursorContainer>
         )}
-      </div>
-
-      <div className={style.img}>
-        <Image
-          alt="img"
-          src={project.images[0]}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
-          loading="lazy"
-        />
       </div>
     </section>
   );

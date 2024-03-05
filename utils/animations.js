@@ -72,7 +72,7 @@ export const toggleanim = {
         }
     },
     animate: {
-        y: '-100%',
+        y: '-150%',
         transition: {
             duration: 1, ease: [0.22, 1, 0.36, 1]
         }

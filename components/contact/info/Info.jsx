@@ -2,6 +2,7 @@ import Link from "next/link";
 import style from "./info.module.scss";
 import Image from "next/image";
 import { socials } from "@/utils/data";
+import CursorContainer from "@/components/cursorContainer/CursorContainer";
 
 export default function Info() {
   return (
@@ -10,16 +11,16 @@ export default function Info() {
         <div className={style.row}>
           <div className={style.col}>
             <h3>Get in touch</h3>
-            <div>
+            <CursorContainer>
               <Link href="mailto:">hello@horizontal.com</Link>
-            </div>
+            </CursorContainer>
           </div>
           <div className={style.col}>
             <h3>Work with us</h3>
-            <div>
+            <CursorContainer>
               <Link href="mailto:">hello.jobs@horizontal.com</Link>
               <Link href="/jobs">/jobs</Link>
-            </div>
+            </CursorContainer>
           </div>
           <div className={style.col}>
             <h3>Where and when</h3>
@@ -32,9 +33,11 @@ export default function Info() {
 
         <div className={style.socials}>
           {socials.map((social, index) => (
-            <a key={index} href={social.url}>
-              <Image alt="social" src={social.img} height={15} width={15} />
-            </a>
+            <CursorContainer key={index}>
+              <a href={social.url}>
+                <Image alt="social" src={social.img} height={15} width={15} />
+              </a>
+            </CursorContainer>
           ))}
         </div>
 

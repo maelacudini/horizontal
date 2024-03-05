@@ -5,14 +5,20 @@ import Image from "next/image";
 import horizontal from "../../public/horizontal.svg";
 import Nav from "./nav/Nav";
 import { toggleanim } from "@/utils/animations";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const route = useRouter();
+  const pathname = usePathname();
 
   return (
-    <header className={style.header}>
+    <header
+      style={{
+        display: pathname.startsWith("/work/") && "none",
+      }}
+      className={style.header}
+    >
       <div className={style.main}>
         <Image
           alt="horizontal"
