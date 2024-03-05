@@ -25,13 +25,13 @@ export default function Info() {
           </div>
         </div>
 
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
             variants={toggleDescTeam}
             initial="initial"
             animate="animate"
             exit="exit"
-            key={`key-${team[persona].name}`}
+            key={team[persona].name}
             className={style.desc}
           >
             <p className="h4">{team[persona].description}</p>
