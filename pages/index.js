@@ -36,15 +36,15 @@ export default function Home() {
         <meta name="creator" content="Maela" />
         <meta name="publisher" content="Maela" />
         <meta name="format-detection" content="telephone=no, address=no, email=no" />
-        <link rel="canonical" href="https://https://horizontal-ten.vercel.app/" />
-        <link rel="alternate" hrefLang="en-US" href="https://https://horizontal-ten.vercel.app/en-US" />
+        <link rel="canonical" href="https://horizontal-ten.vercel.app/" />
+        <link rel="alternate" hrefLang="en-US" href="https://horizontal-ten.vercel.app/en-US" />
 
         <meta property="og:title" content="Horizontal Architecture Agency" />
         <meta property="og:description" content="Crafting visionary designs in Oslo and beyond. Our architecture agency blends Scandinavian minimalism with innovative solutions. Discover our portfolio today." />
-        <meta property="og:url" content="https://https://horizontal-ten.vercel.app/" />
+        <meta property="og:url" content="https://horizontal-ten.vercel.app/" />
         <meta property="og:site_name" content="Horizontal" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:image:url" content="https://https://horizontal-ten.vercel.app/card.png" />
+        <meta property="og:image:url" content="https://horizontal-ten.vercel.app/card.png" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <meta property="og:image:alt" content="Horizontal Architecture Agency" />
@@ -70,7 +70,7 @@ export default function Home() {
         <meta name="twitter:creator:id" content="00000000000" />
         <meta name="twitter:title" content="Horizontal Architecture Agency" />
         <meta name="twitter:description" content="Crafting visionary designs in Oslo and beyond. Our architecture agency blends Scandinavian minimalism with innovative solutions. Discover our portfolio today." />
-        <meta name="twitter:image" content="https://https://horizontal-ten.vercel.app/card.png" />
+        <meta name="twitter:image" content="https://horizontal-ten.vercel.app/card.png" />
 
         <meta name="theme-color" content="white" />
 
