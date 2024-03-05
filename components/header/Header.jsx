@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header
       style={{
-        display: pathname.startsWith("/work/") && "none",
+        display: pathname.includes("/work/") && "none",
       }}
       className={style.header}
     >
