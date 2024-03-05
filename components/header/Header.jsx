@@ -1,5 +1,5 @@
 import style from "./header.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import horizontal from "../../public/horizontal.svg";
@@ -12,13 +12,15 @@ export default function Header() {
   const route = useRouter();
   const pathname = usePathname();
 
+  useEffect(() => {
+    if (pathname.includes("/work/")) {
+      const head = document.getElementById("header");
+      head.style.display = "none";
+    }
+  }, []);
+
   return (
-    <header
-      style={{
-        display: pathname.includes("/work/") && "none",
-      }}
-      className={style.header}
-    >
+    <header id="header" className={style.header}>
       <div className={style.main}>
         <Image
           alt="horizontal"
