@@ -89,13 +89,13 @@ export default function Nav({ open, setOpen }) {
         className={style.bottom}
       >
         <div>
-          <p className="white">Say hello</p>
-          <p className="white">Copyright statement</p>
+          <p className="gray">Say hello</p>
+          <p className="gray">Copyright statement</p>
         </div>
 
         <div>
-          <span className="white">{date}</span>
-          <span className="white">{hour}</span>
+          <span className="gray">{date}</span>
+          <span className="gray">{hour}</span>
         </div>
 
         <div>
