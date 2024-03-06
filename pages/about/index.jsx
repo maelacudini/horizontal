@@ -1,12 +1,13 @@
-import { Fragment } from "react";
-import Hero from "@/components/team/hero/Hero";
+import { Fragment, useRef } from "react";
 import Head from "next/head";
-import Info from "@/components/team/info/Info";
-import Vision from "@/components/team/vision/Vision";
+import Hero from "@/components/about/hero/Hero";
+import Info from "@/components/about/info/Info";
+import Vision from "@/components/about/vision/Vision";
 import dynamic from "next/dynamic";
+import TextPath from "@/components/about/textpath/TextPath";
 
 const DynamicGallery = dynamic(
-  () => import("@/components/team/gallery/Gallery"),
+  () => import("@/components/about/gallery/Gallery"),
   {
     loading: () => <p>Loading...</p>,
   }
@@ -22,11 +23,13 @@ const jsonLd = {
   logo: "https://horizontal-ten.vercel.app/icon.svg",
 };
 
-export default function Team() {
+export default function About() {
+  const ref = useRef(null);
+
   return (
     <Fragment>
       <Head>
-        <title>Team</title>
+        <title>About</title>
 
         <link rel="icon" href="/icon.svg" />
 
@@ -113,6 +116,7 @@ export default function Team() {
       <Hero />
       <DynamicGallery />
       <Vision />
+      <TextPath ref={ref} />
       <Info />
     </Fragment>
   );

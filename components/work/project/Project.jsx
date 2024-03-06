@@ -2,10 +2,11 @@ import Image from "next/image";
 import style from "./project.module.scss";
 import { motion } from "framer-motion";
 import { slideupProject } from "@/utils/animations";
-import Link from "next/link";
 import CursorContainer from "@/components/cursorContainer/CursorContainer";
+import { useRouter } from "next/navigation";
 
 export default function Project({ project, index }) {
+  const router = useRouter();
   return (
     <CursorContainer>
       <motion.article
@@ -15,11 +16,10 @@ export default function Project({ project, index }) {
         viewport={{ once: true }}
         custom={index + 1}
         className={style.project}
+        onClick={() => router.push(`/work/${project.slug}`)}
       >
         <div className={style.overlay}>
-          <Link className="h4 white" href={`/work/${project.slug}`}>
-            View
-          </Link>
+          <p className="h4 white">View</p>
         </div>
         <Image
           alt="image"

@@ -1,15 +1,28 @@
 import style from "./header.module.scss";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import horizontal from "../../public/horizontal.svg";
 import Nav from "./nav/Nav";
-import { toggleanim } from "@/utils/animations";
 import { useRouter } from "next/navigation";
+import CursorContainer from "../cursorContainer/CursorContainer";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const route = useRouter();
+
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("overlay-open");
+    } else {
+      document.body.classList.remove("overlay-open");
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.classList.remove("overlay-open");
+    };
+  }, [open]);
 
   return (
     <header id="header" className={style.header}>
@@ -22,33 +35,12 @@ export default function Header() {
           loading="lazy"
           onClick={() => route.push("/")}
         />
-        <div className={style.toggle}>
-          <motion.div
-            variants={toggleanim}
-            initial="initial"
-            animate={open ? "animate" : "initial"}
-            className={style.slider}
-          >
-            <div onClick={() => setOpen(!open)}>
-              <Image
-                alt="open"
-                src="/menu.svg"
-                height={20}
-                width={20}
-                loading="lazy"
-              />
-            </div>
-            <div onClick={() => setOpen(!open)}>
-              <Image
-                alt="close"
-                src="/close.svg"
-                height={20}
-                width={20}
-                loading="lazy"
-              />
-            </div>
-          </motion.div>
-        </div>
+        <CursorContainer>
+          <div className={style.menu} onClick={() => setOpen(!open)}>
+            <a>Menu</a>
+            <Image alt="social" src={"/menu.svg"} width={25} height={25} />
+          </div>
+        </CursorContainer>
       </div>
 
       <AnimatePresence mode="wait">

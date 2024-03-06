@@ -6,31 +6,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 98;
     position: relative;
     width: 100%;
     max-width: 90rem;
     margin: 2rem 0rem;
 
-    .toggle {
-      position: relative;
-      overflow-y: hidden;
-
-      .slider {
-        div {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 0.5rem;
-          cursor: pointer;
-        }
-
-        div:nth-of-type(2) {
-          position: absolute;
-          bottom: -150%;
-          left: 0;
-        }
-      }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
   }
 }

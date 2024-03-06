@@ -127,33 +127,6 @@ small {
   font-weight: 500;
 }
 
-/*motion page transition*/
-.slidein {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #000;
-  height: 100lvh;
-  width: 100%;
-  transform-origin: bottom;
-  z-index: 99;
-}
-
-.slideout {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #000;
-  height: 100lvh;
-  width: 100%;
-  transform-origin: top;
-  z-index: 99;
-}
-
 /*not found, error,...*/
 .notfound {
   height: calc(100lvh - 89px);
@@ -163,4 +136,9 @@ small {
   justify-content: center;
   text-align: center;
   gap: 2rem;
+}
+
+/*prevent scrolling when nav is open*/
+.overlay-open {
+  overflow: hidden;
 }
