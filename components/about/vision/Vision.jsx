@@ -14,12 +14,10 @@ export default function Vision() {
         <p className="gray">
           The awards we've been honoured with, inspired by our vision
         </p>
-        <Title
-          justify={"flex-end"}
-          phrase={
-            "Our vision is to create meaningful experiences through minimalism and open space, fostering transparency and innovation."
-          }
-        />
+        <p className="h2">
+          Our vision is to create meaningful experiences through minimalism and
+          open space, fostering transparency and innovation
+        </p>
 
         <div className={style.list}>
           {awards.map((award, index) => (

@@ -34,13 +34,12 @@ export default function Footer() {
             ))}
           </div>
         </div>
-
-        <div className={style.privacy}>
-          <small className="gray">© Horizontal Architecture Studio</small>
-          <small className="gray">2024 Privacy Policy</small>
-          <small className="gray">Cookie Policy</small>
-        </div>
       </motion.div>
+      <div className={style.privacy}>
+        <small className="gray">© Horizontal Architecture Studio</small>
+        <small className="gray">2024 Privacy Policy</small>
+        <small className="gray">Cookie Policy</small>
+      </div>
     </footer>
   );
 }
