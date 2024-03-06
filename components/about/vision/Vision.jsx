@@ -1,11 +1,5 @@
 import style from "./vision.module.scss";
-import Title from "@/components/title/Title";
 import { awards } from "@/utils/data";
-import img from "../../../public/award.png";
-import img2 from "../../../public/award1.png";
-import Image from "next/image";
-
-const imgs = [img, img, img, img2, img2];
 
 export default function Vision() {
   return (
