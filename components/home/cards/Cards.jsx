@@ -1,4 +1,3 @@
-import Link from "next/link";
 import style from "./cards.module.scss";
 
 export default function Cards() {
