@@ -1,11 +1,11 @@
 import style from "./header.module.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import horizontal from "../../public/horizontal.svg";
 import Nav from "./nav/Nav";
 import { toggleanim } from "@/utils/animations";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);

@@ -2,9 +2,7 @@ import "@/styles/globals.css";
 import "@/styles/swiper.css";
 import { Figtree } from "next/font/google";
 import Header from "@/components/header/Header";
-import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from "next/router";
-import { slidein, slideout } from "@/utils/animations";
 import Footer from "@/components/footer/Footer";
 import { CursorProvider } from "@/context/CursoreContext";
 import Cursor from "@/components/cursor/Cursor";
@@ -15,18 +13,6 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
 
   return (
-    // <AnimatePresence mode="wait">
-    //   <motion.main key={router.pathname} className={font.className}>
-    //     <motion.div className="slidein" variants={slidein} initial='initial' animate='animate' exit='exit'></motion.div>
-    //     <motion.div className="slideout" variants={slideout} initial='initial' animate='animate' exit='exit'></motion.div>
-    //     <CursorProvider>
-    //       <Header />
-    //       <Component {...pageProps} />
-    // {router.pathname !== '/' && <Footer />}
-    // {router.pathname !== '/' && <Cursor />}
-    //     </CursorProvider>
-    //   </motion.main>
-    // </AnimatePresence>
     <main className={font.className}>
       <CursorProvider>
         <Header />

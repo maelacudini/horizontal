@@ -1,7 +1,10 @@
 .hero {
-  position: sticky;
+  position: fixed;
   top: 0;
-  height: calc(100svh - 89px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100svh;
   width: 100%;
   z-index: 85;
 
@@ -10,12 +13,40 @@
     left: 2rem;
     right: 2rem;
     bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .arrow {
+        filter: invert(1);
+        transform: rotate(180deg);
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        .arrow {
+          transform: rotate(225deg);
+        }
+      }
+    }
   }
 
-  img {
+  .bg {
     object-fit: cover;
     object-position: center;
     filter: brightness(50%);
     -webkit-filter: brightness(50%);
+  }
+}
+
+@media (max-width: 900px) {
+  .info {
+    flex-direction: column;
+    gap: 1rem;
   }
 }

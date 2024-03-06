@@ -35,6 +35,7 @@ export default function Main() {
         draggable={true}
         grabCursor={true}
         navigation={true}
+        loop={true}
         modules={[Mousewheel, FreeMode, Navigation]}
         className="swiper"
       >

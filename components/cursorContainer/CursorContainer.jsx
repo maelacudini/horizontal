@@ -1,6 +1,5 @@
 "use client";
 import { useCursor } from "@/context/CursoreContext";
-import { useEffect } from "react";
 
 export default function CursorContainer({ children }) {
   const { setIsHovering } = useCursor();
@@ -9,6 +8,7 @@ export default function CursorContainer({ children }) {
     <div
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
+      onClick={() => setIsHovering(false)}
     >
       {children}
     </div>
