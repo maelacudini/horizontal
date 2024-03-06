@@ -15,17 +15,25 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.main key={router.pathname} className={font.className}>
-        <motion.div className="slidein" variants={slidein} initial='initial' animate='animate' exit='exit'></motion.div>
-        <motion.div className="slideout" variants={slideout} initial='initial' animate='animate' exit='exit'></motion.div>
-        <CursorProvider>
-          <Header />
-          <Component {...pageProps} />
-          {router.pathname !== '/' && <Footer />}
-          {router.pathname !== '/' && <Cursor />}
-        </CursorProvider>
-      </motion.main>
-    </AnimatePresence>
+    // <AnimatePresence mode="wait">
+    //   <motion.main key={router.pathname} className={font.className}>
+    //     <motion.div className="slidein" variants={slidein} initial='initial' animate='animate' exit='exit'></motion.div>
+    //     <motion.div className="slideout" variants={slideout} initial='initial' animate='animate' exit='exit'></motion.div>
+    //     <CursorProvider>
+    //       <Header />
+    //       <Component {...pageProps} />
+    // {router.pathname !== '/' && <Footer />}
+    // {router.pathname !== '/' && <Cursor />}
+    //     </CursorProvider>
+    //   </motion.main>
+    // </AnimatePresence>
+    <main className={font.className}>
+      <CursorProvider>
+        <Header />
+        <Component {...pageProps} />
+        {router.pathname !== '/' && <Footer />}
+        {router.pathname !== '/' && <Cursor />}
+      </CursorProvider>
+    </main>
   )
 }
