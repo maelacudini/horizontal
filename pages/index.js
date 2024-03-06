@@ -44,9 +44,9 @@ export default function Home() {
         <meta property="og:url" content="https://horizontal-ten.vercel.app/" />
         <meta property="og:site_name" content="Horizontal" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:image:url" content="https://horizontal-ten.vercel.app/card.png" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="600" />
+        <meta property="og:image" content="https://horizontal-ten.vercel.app/card.png" />
+        {/* <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" /> */}
         <meta property="og:image:alt" content="Horizontal Architecture Agency" />
         <meta property="og:type" content="website" />
 
