@@ -7,6 +7,8 @@ import CursorContainer from "@/components/cursorContainer/CursorContainer";
 
 export default function Info() {
   const [persona, setPersona] = useState(0);
+  const desc = team[persona].description;
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <section className={style.info}>
@@ -36,7 +38,17 @@ export default function Info() {
             key={team[persona].name}
             className={style.desc}
           >
-            <p className="h4">{team[persona].description}</p>
+            <div className={style.text}>
+              <p className="h4">
+                {isExpanded ? desc : desc.slice(0, 400) + "..."}
+              </p>
+              <br />
+              <CursorContainer>
+                <a onClick={() => setIsExpanded(!isExpanded)}>
+                  {isExpanded ? "Read less" : "Read more"}
+                </a>
+              </CursorContainer>
+            </div>
 
             <div className={style.details}>
               <p>Name</p>

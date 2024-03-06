@@ -19,7 +19,7 @@ export default function TextPath({ ref }) {
 
   return (
     <section className={style.text}>
-      <svg viewBox="0 0 250 90">
+      <svg viewBox="0 -5 250 105">
         <path
           id="curve"
           fill="none"
@@ -27,7 +27,7 @@ export default function TextPath({ ref }) {
           d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68"
         />
         <text>
-          {[...Array(2)].map((_, i) => (
+          {[...Array(1)].map((_, i) => (
             <textPath
               ref={(ref) => (texts.current[i] = ref)}
               key={i}

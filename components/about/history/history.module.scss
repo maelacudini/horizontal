@@ -1,9 +1,8 @@
 .history {
-  min-height: 100lvh;
+  min-height: 50lvh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   background-color: #f4f4f4;
 
   .paragraph {
@@ -11,7 +10,7 @@
     height: 100%;
     max-width: 90rem;
     flex-wrap: wrap;
-    margin: 5rem 2rem 2rem 2rem;
+    margin: 5rem 2rem;
 
     .word {
       position: relative;
@@ -23,23 +22,5 @@
         opacity: 20%;
       }
     }
-  }
-
-  .info {
-    display: flex;
-    max-width: 90rem;
-    margin: 0rem 2rem 5rem 2rem;
-    gap: 5%;
-
-    p {
-      flex-basis: 47.5%;
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  .info {
-    flex-direction: column;
-    gap: 1rem !important;
   }
 }

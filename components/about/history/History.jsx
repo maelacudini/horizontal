@@ -23,22 +23,6 @@ export default function History({ paragraph }) {
           );
         })}
       </p>
-
-      <div className={style.info}>
-        <p>
-          From humble beginnings to becoming a beacon of architectural prowess,
-          our agency has continually pushed the boundaries of creativity. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Saepe, asperiores.
-          Fuga magni nam mollitia aspernatur, explicabo veniam obcaecati
-          necessitatibus, tenetur voluptatibus, architecto exercitationem sint
-          impedit? Quod debitis non dolore incidunt!
-        </p>
-        <p>
-          From humble beginnings to becoming a beacon of architectural prowess,
-          our agency has continually pushed the boundaries of creativity. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
     </section>
   );
 }

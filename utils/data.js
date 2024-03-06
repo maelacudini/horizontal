@@ -188,3 +188,16 @@ export const awards = [
     { img: '/award/award1.png', title: 'Best Exterior Design, OS', year: 2023 },
     { img: '/award/award1.png', title: 'Best Building in the City, VE', year: 2024 },
 ]
+
+export const steps = [
+    { date: '2013', title: 'John Smith founds the one and only Horizontal Architecture Agency.' },
+    { date: '2013', title: 'Emily Johnson joins the new agency: now we\'re a team of two!' },
+    { date: '2013', title: 'The agency establishes its headquarters in Oslo: a new office space for us!' },
+    { date: '2014', title: 'In search of a new Interior Designer, Sophia Garcia joins Horizontal.' },
+    { date: '2015', title: 'Michael Brown also joins the agency: our team is now complete.' },
+    { date: '2017', title: 'We receive honorable mentions and awards this year.' },
+    { date: '2018', title: 'Our agency expands internationally, opening a branch office in New York City.' },
+    { date: '2019', title: 'Horizontal Architecture Agency wins "Best Design Firm" at the Global Architecture Awards.' },
+    { date: '2020', title: 'We launch our innovative sustainability initiative, focusing on green building practices.' },
+    { date: '2021', title: 'Celebrating a decade of excellence in architecture and design at our agency.' },
+]

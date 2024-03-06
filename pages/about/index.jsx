@@ -6,6 +6,7 @@ import Vision from "@/components/about/vision/Vision";
 import dynamic from "next/dynamic";
 import TextPath from "@/components/about/textpath/TextPath";
 import History from "@/components/about/history/History";
+import Slides from "@/components/about/slides/Slides";
 
 const DynamicGallery = dynamic(
   () => import("@/components/about/gallery/Gallery"),
@@ -124,6 +125,7 @@ export default function About() {
           "The illustrious history of Horizontal Architecture Agency dates back to 2013. Founded by the visionary architect, John Smith, our agency embarked on a journey of innovation and excellence. Smith's passion for blending traditional craftsmanship with cutting-edge design principles laid the foundation for our distinguished portfolio."
         }
       />
+      <Slides />
     </Fragment>
   );
 }

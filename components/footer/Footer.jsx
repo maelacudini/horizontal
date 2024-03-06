@@ -10,7 +10,7 @@ export default function Footer() {
     target: ref,
     offset: ["start end", "end end"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [-700, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
 
   return (
     <footer ref={ref} className={style.footer}>
@@ -35,11 +35,11 @@ export default function Footer() {
           </div>
         </div>
       </motion.div>
-      <div className={style.privacy}>
+      <motion.div style={{ y }} className={style.privacy}>
         <small className="gray">© Horizontal Architecture Studio</small>
         <small className="gray">2024 Privacy Policy</small>
         <small className="gray">Cookie Policy</small>
-      </div>
+      </motion.div>
     </footer>
   );
 }
