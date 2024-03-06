@@ -5,7 +5,7 @@ export default function Cards() {
   return (
     <div className={style.cards}>
       <p className="h3">
-        Horizontal is an Architecture Agency founded in 2016 and based in Oslo,
+        Horizontal is an Architecture Agency founded in 2013 and based in Oslo,
         Norway.
       </p>
       <div className={style.bottom}>

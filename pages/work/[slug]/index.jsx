@@ -77,7 +77,7 @@ export default function Project() {
         />
         <meta property="og:locale" content="en_US" />
         <meta
-          property="og:image:url"
+          property="og:image"
           content="https://horizontal-ten.vercel.app/card.png"
         />
         <meta property="og:image:width" content="800" />

@@ -37,7 +37,7 @@ export default function Header() {
         />
         <CursorContainer>
           <div className={style.menu} onClick={() => setOpen(!open)}>
-            <a>Menu</a>
+            <p>Menu</p>
             <Image alt="social" src={"/menu.svg"} width={25} height={25} />
           </div>
         </CursorContainer>
