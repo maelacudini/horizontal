@@ -26,6 +26,8 @@
     transition: filter 0.5s;
     position: relative;
     z-index: 80;
+    width: 100%;
+    height: auto;
   }
 
   &:hover {
