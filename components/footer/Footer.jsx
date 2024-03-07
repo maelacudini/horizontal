@@ -1,5 +1,4 @@
 import { useTransform, motion, useScroll } from "framer-motion";
-import Title from "../title/Title";
 import style from "./footer.module.scss";
 import { socials } from "@/utils/data";
 import { useRef } from "react";
@@ -16,11 +15,7 @@ export default function Footer() {
     <footer ref={ref} className={style.footer}>
       <motion.div style={{ y }} className={style.main}>
         <div className={style.intro}>
-          <Title
-            phrase={"Let's work together"}
-            justify={"center"}
-            col={"white"}
-          />
+          <p className="h1 white">Let's work together</p>
           <p className="h4 gray">
             We would love to hear what's your next big project, you can find us
             on the following platform.

@@ -166,7 +166,7 @@ export const benefits = [
     },
     {
         title: 'Professional Development',
-        description: 'Training programs and tuition reimbursement for employees to enhance their skills and knowledge.',
+        description: 'Training programs and tuition reimbursement for employees to sharpen skills and knowledge.',
         img: '/humaaans/human1.svg'
     },
     {
@@ -175,8 +175,8 @@ export const benefits = [
         img: '/humaaans/human2.svg'
     },
     {
-        title: 'Employee Assistance Program',
-        description: 'Confidential counseling and support services to help employees with personal or work-related issues.',
+        title: 'Assistance Program',
+        description: 'Confidential counseling and support services to help employees work-related issues.',
         img: '/humaaans/human3.svg'
     }
 ];

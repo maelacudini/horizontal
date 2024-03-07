@@ -13,12 +13,14 @@ export default function Info() {
             <h3>Get in touch</h3>
             <CursorContainer>
               <Link href="mailto:">hello@horizontal.com</Link>
+              <Link href="mailto:">hello.hr@horizontal.com</Link>
             </CursorContainer>
           </div>
           <div className={style.col}>
             <h3>Work with us</h3>
             <CursorContainer>
               <Link href="mailto:">hello.jobs@horizontal.com</Link>
+              <Link href="mailto:">hello.hr@horizontal.com</Link>
               <Link href="/jobs">/jobs</Link>
             </CursorContainer>
           </div>
@@ -31,16 +33,6 @@ export default function Info() {
           </div>
         </div>
 
-        <div className={style.socials}>
-          {socials.map((social, index) => (
-            <CursorContainer key={index}>
-              <a href={social.url}>
-                <Image alt="social" src={social.img} height={15} width={15} />
-              </a>
-            </CursorContainer>
-          ))}
-        </div>
-
         <div className={style.disclaimer}>
           <p className="gray">
             Please note that this website is entirely fictional, and all
@@ -50,6 +42,16 @@ export default function Info() {
             purely coincidental. This website serves solely as a platform for
             artistic expression and imagination.
           </p>
+        </div>
+
+        <div className={style.socials}>
+          {socials.map((social, index) => (
+            <CursorContainer key={index}>
+              <a href={social.url}>
+                <Image alt="social" src={social.img} height={15} width={15} />
+              </a>
+            </CursorContainer>
+          ))}
         </div>
       </div>
     </section>

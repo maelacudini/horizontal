@@ -72,3 +72,47 @@
 #slides .swiper-button-prev::after {
   font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
 }
+
+#benefits .swiper {
+  height: 30rem;
+  margin-top: 4rem;
+}
+
+#benefits .swiper-slide {
+  height: 25rem;
+  width: 20rem !important;
+  border-radius: 2.5rem;
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scale: 0.95;
+  transition: all 0.3s;
+}
+
+#benefits .swiper-slide-active {
+  scale: 1;
+  margin: 0rem 0.5rem;
+}
+
+#benefits .swiper-button-prev {
+  color: black;
+  position: absolute;
+  bottom: 0;
+  top: unset;
+  left: 2rem !important;
+}
+
+#benefits .swiper-button-next {
+  color: black;
+  position: absolute;
+  bottom: 0;
+  top: unset;
+  right: 2rem !important;
+}
+
+#benefits .swiper-button-next::after,
+#benefits .swiper-button-prev::after {
+  font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+}

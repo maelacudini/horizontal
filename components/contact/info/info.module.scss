@@ -25,13 +25,16 @@
       }
     }
 
+    .disclaimer {
+      margin: 5rem 0rem;
+    }
+
     .socials {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1rem;
-      margin: 5rem 0rem;
     }
   }
 }

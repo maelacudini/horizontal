@@ -58,7 +58,7 @@ a {
 }
 
 a:hover {
-  color: rgb(200, 200, 200);
+  color: rgb(150, 150, 150);
 }
 
 small {
@@ -116,7 +116,7 @@ small {
 }
 
 .gray {
-  color: rgb(200, 200, 200);
+  color: rgb(150, 150, 150);
 }
 
 .difference {
