@@ -26,7 +26,7 @@ const jsonLd = {
 };
 
 export default function About() {
-  const ref = useRef(null);
+  const bodyref = useRef(null);
 
   return (
     <Fragment>
@@ -119,7 +119,7 @@ export default function About() {
       <DynamicGallery />
       <Info />
       <Vision />
-      <TextPath ref={ref} />
+      <TextPath bodyref={bodyref} />
       <History
         paragraph={
           "The illustrious history of Horizontal Architecture Agency dates back to 2013. Founded by the visionary architect, John Smith, our agency embarked on a journey of innovation and excellence. Smith's passion for blending traditional craftsmanship with cutting-edge design principles laid the foundation for our distinguished portfolio."

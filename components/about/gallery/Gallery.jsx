@@ -27,7 +27,7 @@ export default function Gallery() {
         <SwiperSlide>
           <article className={style.title}>
             <h2>The Team</h2>
-            <Link href="mailto:">Join us</Link>
+            <a href="mailto:">Join us</a>
           </article>
         </SwiperSlide>
         {team.map((person, index) => (
@@ -56,7 +56,7 @@ export default function Gallery() {
         ))}
         <SwiperSlide>
           <article className={style.title}>
-            <Link href="mailto:">We're waiting for your application</Link>
+            <a href="mailto:">We're waiting for your application</a>
           </article>
         </SwiperSlide>
       </Swiper>

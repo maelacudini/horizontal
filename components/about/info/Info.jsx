@@ -14,7 +14,8 @@ export default function Info() {
     <section className={style.info}>
       <div className={style.main}>
         <div className={style.side}>
-          <h4 className="">Index</h4>
+          <p className="h4">Index</p>
+          <br />
           <div className={style.links}>
             {team.map((person, index) => (
               <CursorContainer key={index}>
@@ -44,9 +45,9 @@ export default function Info() {
               </p>
               <br />
               <CursorContainer>
-                <a onClick={() => setIsExpanded(!isExpanded)}>
+                <p onClick={() => setIsExpanded(!isExpanded)}>
                   {isExpanded ? "Read less" : "Read more"}
-                </a>
+                </p>
               </CursorContainer>
             </div>
 

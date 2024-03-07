@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import style from "./text.module.scss";
 import { useScroll } from "framer-motion";
 
-export default function TextPath({ ref }) {
+export default function TextPath({ bodyref }) {
   const texts = useRef([]);
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: bodyref,
     offset: ["start center", "end end"],
   });
 
