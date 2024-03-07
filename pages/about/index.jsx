@@ -4,12 +4,30 @@ import Hero from "@/components/about/hero/Hero";
 import Info from "@/components/about/info/Info";
 import Vision from "@/components/about/vision/Vision";
 import dynamic from "next/dynamic";
-import TextPath from "@/components/about/textpath/TextPath";
-import History from "@/components/about/history/History";
-import Slides from "@/components/about/slides/Slides";
 
 const DynamicGallery = dynamic(
   () => import("@/components/about/gallery/Gallery"),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
+
+const DynamicTextPath = dynamic(
+  () => import("@/components/about/textpath/TextPath"),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
+
+const DynamicHistory = dynamic(
+  () => import("@/components/about/history/History"),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
+
+const DynamicSlides = dynamic(
+  () => import("@/components/about/slides/Slides"),
   {
     loading: () => <p>Loading...</p>,
   }
@@ -119,13 +137,13 @@ export default function About() {
       <DynamicGallery />
       <Info />
       <Vision />
-      <TextPath bodyref={bodyref} />
-      <History
+      <DynamicTextPath bodyref={bodyref} />
+      <DynamicHistory
         paragraph={
           "The illustrious history of Horizontal Architecture Agency dates back to 2013. Founded by the visionary architect, John Smith, our agency embarked on a journey of innovation and excellence. Smith's passion for blending traditional craftsmanship with cutting-edge design principles laid the foundation for our distinguished portfolio."
         }
       />
-      <Slides />
+      <DynamicSlides />
     </Fragment>
   );
 }

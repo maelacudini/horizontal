@@ -3,7 +3,14 @@ import Head from "next/head";
 import Hero from "@/components/contact/hero/Hero";
 import Info from "@/components/contact/info/Info";
 import Img from "@/components/contact/img/Img";
-import SlidingText from "@/components/slidingText/SlidingText";
+import dynamic from "next/dynamic";
+
+const DynamicSlidingText = dynamic(
+  () => import("@/components/slidingText/SlidingText"),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -113,7 +120,7 @@ export default function Contact() {
       </Head>
       <Hero />
       <Info />
-      <SlidingText />
+      <DynamicSlidingText />
       <Img />
     </Fragment>
   );
