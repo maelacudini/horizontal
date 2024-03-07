@@ -1,15 +1,22 @@
 import { useTransform, motion, useScroll } from "framer-motion";
 import style from "./footer.module.scss";
 import { socials } from "@/utils/data";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Footer() {
+  const [mobile, setMobile] = useState(false);
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end end"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], mobile ? [0, 0] : [-500, 0]);
+
+  useEffect(() => {
+    if (window.innerWidth < 800) {
+      setMobile(true);
+    }
+  }, []);
 
   return (
     <footer ref={ref} className={style.footer}>
