@@ -1,13 +1,16 @@
 .header {
   display: flex;
   justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 98;
 
   .main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 98;
-    position: relative;
     width: 100%;
     max-width: 90rem;
     margin: 2rem 0rem;

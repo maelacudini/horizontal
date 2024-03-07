@@ -1,5 +1,6 @@
 #home .swiper {
   height: calc(100svh - 105px);
+  margin-top: 89px;
 }
 
 #home .swiper-slide {
