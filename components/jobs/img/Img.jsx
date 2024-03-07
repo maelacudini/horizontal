@@ -4,7 +4,13 @@ import style from "./img.module.scss";
 export default function Img() {
   return (
     <section className={style.imgcont}>
-      <Image alt="team" src="/jobs.jpg" fill loading="lazy" />
+      <Image
+        alt="team"
+        src="/jobs.jpg"
+        fill
+        loading="lazy"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+      />
     </section>
   );
 }

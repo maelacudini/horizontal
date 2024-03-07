@@ -26,7 +26,8 @@ export default function Project({ project, index }) {
           src={project.images[0]}
           height={500}
           width={500}
-          loading="lazy"
+          loading={index === 1 ? "eager" : "lazy"}
+          priority={index === 1 ? true : false}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
         />
 

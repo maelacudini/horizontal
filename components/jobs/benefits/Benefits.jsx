@@ -24,7 +24,13 @@ export default function Benefits() {
         >
           {benefits.map((benefit, i) => (
             <SwiperSlide key={i}>
-              <Image alt="image" src={benefit.img} height={150} width={150} />
+              <Image
+                alt="image"
+                src={benefit.img}
+                height={150}
+                width={150}
+                loading="lazy"
+              />
               <div className={style.desc}>
                 <p className="h4">{benefit.title}</p>
                 <p>{benefit.description}</p>
