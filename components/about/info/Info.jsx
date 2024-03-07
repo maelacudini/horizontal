@@ -41,7 +41,7 @@ export default function Info() {
           >
             <div className={style.text}>
               <p className="h4">
-                {isExpanded ? desc : desc.slice(0, 400) + "..."}
+                {isExpanded ? desc : desc.slice(0, 350) + "..."}
               </p>
               <br />
               <CursorContainer>

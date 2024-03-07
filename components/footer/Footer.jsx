@@ -24,8 +24,8 @@ export default function Footer() {
         <div className={style.intro}>
           <p className="h1 white">Let's work together</p>
           <p className="h4 gray">
-            We would love to hear what's your next big project, you can find us
-            on the following platform.
+            We would love to hear your next big project, follow us on the
+            following platforms.
           </p>
 
           <div className={style.socials}>

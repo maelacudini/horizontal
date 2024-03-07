@@ -38,7 +38,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
+  font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
   font-weight: 400;
 }
 
