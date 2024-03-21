@@ -1,40 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+1.  Animations
 
-## Getting Started
+`/utils/animations.js`
+This module contains animation configurations using Framer Motion.
 
-First, run the development server:
+`titleanim`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Initial:** Animates the title from off-screen to its starting position.
+- **Animate:** Moves the title to its final position with a specified transition duration and delay.
+- Used for animating titles.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`modalanim`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Initial:** Starts the modal off-screen.
+- **Animate:** Brings the modal onto the screen.
+- **Exit:** Moves the modal off-screen.
+- Used for modal animations.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+`slideupgeneric`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Initial:** Starts elements off-screen and opaque.
+- **Animate:** Brings elements onto the screen with opacity transition.
+- **Exit:** Moves elements off-screen with opacity transition.
+- Used for generic slide-up animations.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2.  Data Management
 
-## Learn More
+`/utils/data.js`
+This module contains static data for the website.
+In case there is a database you won't need this file.
 
-To learn more about Next.js, take a look at the following resources:
+3.  Sitemap
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`/utils/sitemap.js`
+This module generates the website's XML sitemap dynamically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Generates XML sitemap based on project data.
+- Utilizes Next.js `getServerSideProps` to generate sitemap on the server-side.
 
-## Deploy on Vercel
+4.  Robots.txt
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`/public/robots.txt`
+Defines the behavior of web crawlers.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Allows all user-agents.
+- Specifies the location of the sitemap.
+
+5.  Index.js
+
+`/pages/index.js`
+The main landing page of the website.
+
+- Defines metadata such as title, description, and social media tags.
+- Sets up JSON-LD structured data for SEO purposes.
+- Each index.js contains meta tags and schema that can be customized
+
+`_app.js` File
+
+Integration of Global Styles
+
+- Imports global CSS styles from `globals.css` and `swiper.css`.
+- Ensures consistent styling across the application.
+
+Font Integration
+
+- Imports the `Figtree` font from Google Fonts using the `next/font` package.
+- Applies the imported font as a global class to ensure consistent typography.
+
+Application Layout
+
+- Renders the `<Header />` component at the top of each page.
+- Renders the main content component `<Component {...pageProps} />`.
+- Renders the `<Footer />` component at the bottom of each page, except on the homepage (`'/'` route).
+- Renders the `<Cursor />` component, which provides custom cursor effects, except on the homepage.
+
+Cursor Provider
+
+- Wraps the application with the `CursorProvider` context provider.
+- Provides state and functions related to cursor behavior.
+- Exposes a custom hook `useCursor` for accessing cursor state and functions.
+
+Custom Cursor Context
+
+`CursorProvider` Component
+
+- Creates a context provider for managing cursor state.
+- Initializes state to track whether the cursor is hovering over an element.
+
+`useCursor` Hook
+
+- Provides a hook for consuming cursor state and functions within functional components.
+- Returns the current cursor state and a function to update it.

@@ -1,7 +1,7 @@
 import { jobs } from "@/utils/data";
 import style from "./openings.module.scss";
 import Image from "next/image";
-import CursorContainer from "@/components/cursorContainer/CursorContainer";
+import CursorContainer from "@/components/common/cursorContainer/CursorContainer";
 
 export default function Openings() {
   return (

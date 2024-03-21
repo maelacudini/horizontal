@@ -1,13 +1,13 @@
 import "@/styles/globals.css";
 import "@/styles/swiper.css";
 import { Figtree } from "next/font/google";
-import Header from "@/components/header/Header";
 import { useRouter } from "next/router";
-import Footer from "@/components/footer/Footer";
-import { CursorProvider } from "@/context/CursoreContext";
-import Cursor from "@/components/cursor/Cursor";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import Header from "@/components/common/header/Header";
+import Cursor from "@/components/common/cursor/Cursor";
+import Footer from "@/components/common/footer/Footer";
+import { CursorProvider } from "@/context/CursoreContext";
 
 const font = Figtree({ subsets: ["latin"] });
 

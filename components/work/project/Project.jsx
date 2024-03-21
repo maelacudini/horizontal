@@ -2,8 +2,8 @@ import Image from "next/image";
 import style from "./project.module.scss";
 import { motion } from "framer-motion";
 import { slideupProject } from "@/utils/animations";
-import CursorContainer from "@/components/cursorContainer/CursorContainer";
 import { useRouter } from "next/navigation";
+import CursorContainer from "@/components/common/cursorContainer/CursorContainer";
 
 export default function Project({ project, index }) {
   const router = useRouter();

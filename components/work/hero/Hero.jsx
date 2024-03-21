@@ -1,4 +1,4 @@
-import Title from "@/components/title/Title";
+import Title from "@/components/common/title/Title";
 import style from "./hero.module.scss";
 
 export default function Hero() {

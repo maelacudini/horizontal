@@ -6,7 +6,7 @@ import Img from "@/components/contact/img/Img";
 import dynamic from "next/dynamic";
 
 const DynamicSlidingText = dynamic(
-  () => import("@/components/slidingText/SlidingText"),
+  () => import("../../components/common/slidingText/SlidingText"),
   {
     loading: () => <p>Loading...</p>,
   }

@@ -2,7 +2,7 @@ import Link from "next/link";
 import style from "./info.module.scss";
 import Image from "next/image";
 import { socials } from "@/utils/data";
-import CursorContainer from "@/components/cursorContainer/CursorContainer";
+import CursorContainer from "@/components/common/cursorContainer/CursorContainer";
 
 export default function Info() {
   return (

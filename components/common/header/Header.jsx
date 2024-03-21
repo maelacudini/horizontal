@@ -2,7 +2,7 @@ import style from "./header.module.scss";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import horizontal from "../../public/horizontal.svg";
+import horizontal from "../../../public/horizontal.svg";
 import Nav from "./nav/Nav";
 import { useRouter } from "next/navigation";
 import CursorContainer from "../cursorContainer/CursorContainer";

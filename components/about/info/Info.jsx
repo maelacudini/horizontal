@@ -3,7 +3,7 @@ import style from "./info.module.scss";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toggleDescTeam } from "@/utils/animations";
-import CursorContainer from "@/components/cursorContainer/CursorContainer";
+import CursorContainer from "@/components/common/cursorContainer/CursorContainer";
 
 export default function Info() {
   const [persona, setPersona] = useState(0);

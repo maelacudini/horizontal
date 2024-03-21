@@ -1,11 +1,11 @@
 import { links, socials } from "@/utils/data";
-import style from "./nav.module.scss";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { modalanim, slideupgeneric } from "@/utils/animations";
+import style from "./nav.module.scss";
+import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import CursorContainer from "@/components/cursorContainer/CursorContainer";
+import CursorContainer from "../../cursorContainer/CursorContainer";
 
 export default function Nav({ open, setOpen }) {
   const [date, setDate] = useState("00.00.00");
