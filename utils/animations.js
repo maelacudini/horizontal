@@ -10,6 +10,20 @@ export const titleanim = {
     }),
 }
 
+export const headerAnim = {
+    initial: {
+        y: '-100%'
+    },
+    animate: {
+        y: '0%',
+        transition: { duration: 0.5, type: "linear", ease: [0.76, 0, 0.24, 1] }
+    },
+    exit: {
+        y: '-100%',
+        transition: { duration: 0.5, type: "linear", ease: [0.76, 0, 0.24, 1] }
+    },
+}
+
 export const modalanim = {
     initial: {
         y: '-100%',

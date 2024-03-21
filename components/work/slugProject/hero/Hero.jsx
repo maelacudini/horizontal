@@ -1,7 +1,7 @@
 import Image from "next/image";
 import style from "./hero.module.scss";
 import Link from "next/link";
-import CursorContainer from "@/components/cursorContainer/CursorContainer";
+import CursorContainer from "@/components/common/cursorContainer/CursorContainer";
 
 export default function Hero({ project }) {
   return (

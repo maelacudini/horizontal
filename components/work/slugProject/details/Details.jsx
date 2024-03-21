@@ -1,7 +1,7 @@
+import CursorContainer from "@/components/common/cursorContainer/CursorContainer";
 import style from "./details.module.scss";
 import Link from "next/link";
 import { useState } from "react";
-import CursorContainer from "@/components/cursorContainer/CursorContainer";
 
 export default function Details({ project, prevProject, nextProject }) {
   const [copySuccess, setCopySuccess] = useState(false);

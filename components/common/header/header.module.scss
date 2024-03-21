@@ -6,6 +6,9 @@
   right: 0;
   top: 0;
   z-index: 98;
+  background-color: #ffffff50;
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
 
   .main {
     display: flex;
