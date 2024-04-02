@@ -58,7 +58,7 @@ export default function Home() {
 
         <link rel="shortcut icon" href="/icon.svg" />
         <link rel="icon" href="/icon.svg" />
-        <link rel="apple-touch-icon" href="/icon.svg" />
+        <link rel="apple-touch-icon" href="/icon.png" />
         <link
           rel="apple-touch-icon-precomposed"
           href="/icon.svg"
